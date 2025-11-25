@@ -55,16 +55,15 @@ This repository does **not** include the patcher itself. It is an add-on package
    npm install
    ```
 2. Create the addTrains package folder
+Inside your subwaybuilder-patcher directory, create a directory:
 
-Inside your subwaybuilder-patcher directory, create:
 patcher/
   packages/
     addTrains/
-      config_trains.js
-      patcherExec.js
+
 Copy config_trains.js and patcherExec.js from this repository into patcher/packages/addTrains/.
 
-3. Enable the package in config.js
+4. Enable the package in config.js
 
 Open config.js in the root of the patcher repo and make sure packagesToRun includes "addTrains".
 For example:
