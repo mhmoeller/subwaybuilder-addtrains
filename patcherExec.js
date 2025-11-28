@@ -7,7 +7,7 @@ import config from './config_trains.js';
  * @returns {Object} The modified fileContents dictionary.
  */
 export function patcherExec(fileContents) {
-  console.log("[addTrains] Executing patcherExec...");
+  console.log("[addTrains] Executing patcherExec... Contributed by Mhmoeller ");
 
   // Iterate over the dictionary to find the correct files by their dynamic names
   fileContents.INDEX = patchIndexContent(fileContents.INDEX, config);
