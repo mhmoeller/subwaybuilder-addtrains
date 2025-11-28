@@ -2,7 +2,7 @@ import config from './config_trains.js';
 
 /**
  * patcherExec
- * Required by Kronifer's SubwayBuilder Patcher (refactorExtendable).
+ * Required by Kronifer's SubwayBuilder Patcher.
  * * @param {Object} fileContents - Dictionary containing filenames/content and resource paths.
  * @returns {Object} The modified fileContents dictionary.
  */
@@ -16,6 +16,23 @@ export function patcherExec(fileContents) {
   console.log("Successfully patched trains according to config_trains.js");
   return fileContents;
 }
+
+// -----------------------------------------------------------
+// STEP 0: VALIDATE CONFIGURATION
+// Prevents broken game states/crashes before patching starts.
+// -----------------------------------------------------------
+
+try {
+  validateConfig(config);
+} catch (error) {
+  console.error("");
+  console.error("CONFIG VALIDATION FAILED FOR addTrains.");
+  console.error("Please fix the errors in config_trains.js and try again.");
+  console.error("");
+  console.error(error.message);
+  throw error;
+}
+
 
 // ==================================================
 // LOGIC FUNCTIONS (Core implementation)
@@ -107,4 +124,135 @@ function patchGameMainContent(text, config) {
 
   console.log(`  -> Patched Road Collision Logic`);
   return text.replace(re, (match) => match + "\n" + snippet);
+}
+
+// ==================================================
+// VALIDATION LOGIC
+// ==================================================
+// --- VALIDATION LOGIC ---
+function validateConfig(config) {
+  if (!config || typeof config !== "object") {
+    throw new Error(
+      "Config is missing or invalid. Make sure config_trains.js exports a config object."
+    );
+  }
+
+  if (!config.trains || typeof config.trains !== "object") {
+    throw new Error(
+      "Missing 'trains' in config. Make sure config_trains.js has a 'trains' object."
+    );
+  }
+
+  for (const [key, t] of Object.entries(config.trains)) {
+    const trainLabel = t?.id || t?.name || key;
+
+    // Top-level required fields (canCrossRoads is optional)
+    const missingTop = [];
+    if (!t.id) missingTop.push("id");
+    if (!t.name) missingTop.push("name");
+    if (!t.description) missingTop.push("description");
+    if (!t.stats) missingTop.push("stats");
+    if (!t.compatibleTrackTypes) missingTop.push("compatibleTrackTypes");
+    if (!t.appearance) missingTop.push("appearance");
+
+    if (missingTop.length > 0) {
+      throw new Error(
+        `Missing fields: '${missingTop.join(", ")}' in '${trainLabel}'.`
+      );
+    }
+
+    // Stats object must exist and be an object
+    const s = t.stats;
+    if (!s || typeof s !== "object") {
+      throw new Error(
+        `Invalid or missing 'stats' object in '${trainLabel}'.`
+      );
+    }
+
+    // Required stats fields
+    const requiredStats = [
+      "maxAcceleration",
+      "maxDeceleration",
+      "maxSpeed",
+      "maxSpeedLocalStation",
+      "capacityPerCar",
+      "carLength",
+      "minCars",
+      "maxCars",
+      "carsPerCarSet",
+      "carCost",
+      "trainWidth",
+      "minStationLength",
+      "maxStationLength",
+      "baseTrackCost",
+      "baseStationCost",
+      "trainOperationalCostPerHour",
+      "carOperationalCostPerHour",
+      "scissorsCrossoverCost",
+    ];
+
+    const missingStats = requiredStats.filter(
+      (field) => s[field] === undefined || s[field] === null
+    );
+
+    if (missingStats.length > 0) {
+      throw new Error(
+        `Missing stats: '${missingStats.join(", ")}' in '${trainLabel}'.`
+      );
+    }
+
+    // Logical checks between numeric stats
+    const requiredGap = 2;
+    const carLength = s.carLength;
+    const maxCars = s.maxCars;
+    const minStationLength = s.minStationLength;
+    const maxStationLength = s.maxStationLength;
+
+    const len = carLength * maxCars;
+
+    // minCars should not be larger than maxCars
+    if (s.minCars > s.maxCars) {
+      throw new Error(
+        `minCars (${s.minCars}) is greater than maxCars (${s.maxCars}) in '${trainLabel}'.`
+      );
+    }
+
+    // minStationLength must be at least carLength * maxCars + 2
+    const minRequiredMinStation = len + requiredGap;
+    if (minStationLength < minRequiredMinStation) {
+      throw new Error(
+        `Make sure minStationLength on '${trainLabel}' is at least ${minRequiredMinStation}. ` +
+          `(current minStationLength=${minStationLength}, train length=${len}; carLength=${carLength}, maxCars=${maxCars}).`
+      );
+    }
+
+    // maxStationLength must be at least 10m longer than minStationLength
+    if (maxStationLength < minStationLength + requiredGap) {
+      const suggestedMaxStation = minStationLength + requiredGap;
+      throw new Error(
+        `maxStationLength must be at least ${requiredGap}m longer than minStationLength. Look at '${trainLabel}'. ` +
+          `With your current values (minStationLength=${minStationLength}, maxStationLength=${maxStationLength}), ` +
+          `maxStationLength should be at least ${suggestedMaxStation}.`
+      );
+    }
+
+    // Train length must not exceed maxStationLength
+    if (len > maxStationLength) {
+      throw new Error(
+        `Max train length (${len}) is greater than maxStationLength (${maxStationLength}) for '${trainLabel}'. ` +
+          `Increase maxStationLength or reduce maxCars/carLength to avoid crashes.`
+      );
+    }
+
+    // Warnings about compatibleTrackTypes
+    if (!Array.isArray(t.compatibleTrackTypes)) {
+      console.warn(
+        `Warning: 'compatibleTrackTypes' for '${trainLabel}' is not an array( not in [""] ) – skipping detailed track type check.`
+      );
+    } else if (!t.compatibleTrackTypes.includes(t.id)) {
+      console.warn(
+        `Warning: ID '${t.id}' is not listed in compatibleTrackTypes for '${trainLabel}'.`
+      );
+    }
+  }
 }

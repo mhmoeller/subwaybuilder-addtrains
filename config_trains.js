@@ -107,7 +107,7 @@ export default {
       canCrossRoads: false, // May not cross roads at street level. But can still cross them +/-5m as usual.
       stats: {
         maxAcceleration: 1.3, // acceleration in m/s^2
-        maxDeceleration: 1.2,
+        maxDeceleration: 1.2, // braking in m/s^2
         maxSpeed: 33.3, // Speed in m/s
         maxSpeedLocalStation: 13, // speed in m/s through stations
         capacityPerCar: 250, // number of people per car so if 8 cars it's 2000
@@ -117,8 +117,8 @@ export default {
         carsPerCarSet: 4, // standard number of cars
         carCost: 3000000, // price per car
         trainWidth: 3.6, // width of train in m
-        minStationLength: 100, // make sure this is larger with at least a few meters than your carLength*minCars
-        maxStationLength: 200, // make sure this is larger with at least a few meters than your carLength*maxCars
+        minStationLength: 180, // make sure this is larger with at least 2 meters longer than your carLength*maxCars
+        maxStationLength: 200, // make sure this is at least 10m larger than minStationLength
         baseTrackCost: 50000, // track cost at street level
         baseStationCost: 80000000, // station cost at street level
         trainOperationalCostPerHour: 600, // whole train cost to operate
@@ -145,7 +145,7 @@ export default {
         carsPerCarSet: 2,
         carCost: 2000000,
         trainWidth: 2.75,
-        minStationLength: 60,
+        minStationLength: 82,
         maxStationLength: 120,
         baseTrackCost: 40000,
         baseStationCost: 60000000,
@@ -173,7 +173,7 @@ export default {
         carsPerCarSet: 2,
         carCost: 4000000,
         trainWidth: 3.1,
-        minStationLength: 100,
+        minStationLength: 210,
         maxStationLength: 275,
         baseTrackCost: 60000,
         baseStationCost: 90000000,
@@ -201,7 +201,7 @@ export default {
         carsPerCarSet: 1,
         carCost: 1500000,
         trainWidth: 2.65,
-        minStationLength: 40,
+        minStationLength: 62,
         maxStationLength: 80,
         baseTrackCost: 25000,
         baseStationCost: 20000000,
