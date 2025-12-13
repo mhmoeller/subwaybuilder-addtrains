@@ -44,13 +44,15 @@ You need:
 
 1. Open the game, go to the Settings and enable modding. Press the Open Mods Folder.
 
-2. Download the manifest.json and the index.js from here to the Mods folder. 
+2. Create a folder and name it addTrains
 
-3. Restart the game.
+4. Download the manifest.json and the index.js from here to the Mods folder. 
+
+5. Restart the game.
    
-5. Enter the Mods menu again and enable the Add Trains.
+6. Enter the Mods menu again and enable the Add Trains.
 
-6. Restart the game. The Mod should now work and you can enable the Trains you want to add/mod.
+7. Restart the game. The Mod should now work and you can enable the Trains you want to add/mod.
 
 Notes:
 Every train type has:
