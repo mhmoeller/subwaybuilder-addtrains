@@ -1,0 +1,22 @@
+{
+    "id": "com.mhmoeller.addtrains",
+    "name": "Add Trains",
+    "description": "Adds or mods custom train types",
+    "version": "2.0.0",
+    "author": {
+		"name": "mhmoeller",
+		"url": "https://github.com/mhmoeller"
+	},
+    "main": "index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mhmoeller/subwaybuilder-addtrains/tree/main"
+	},
+	"keywords": [
+		"subway-builder",
+		"mod",
+		"trains"
+	],
+	"subwayBuilderVersion": ">=0.11.1"
+}
