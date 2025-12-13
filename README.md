@@ -46,7 +46,7 @@ You need:
 
 2. Create a folder and name it addTrains
 
-4. Download the manifest.json and the index.js from here to the Mods folder. 
+4. Download the manifest.json and the index.js from here to the addTrains folder. 
 
 5. Restart the game.
    
