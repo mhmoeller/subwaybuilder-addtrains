@@ -6,6 +6,8 @@ These can be customised to fit your own train types, or add your own custom type
 
 The package is meant for players who want more realistic regional/commuter rail and tram options for their custom maps.
 
+I know the Menu button stays up throughout the Menu structure. It will be updated once we get hooks to the Main Menu. Untill then It will stay at it is.
+
 ---
 
 ## Features
