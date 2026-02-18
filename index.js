@@ -3135,6 +3135,9 @@
                     "Dual-Mode Commuter": [],
                     "Hydrogen Commuter": [],
                     "Rubber LRT": []
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				};
 				
@@ -3944,6 +3947,16 @@
 							"Rubber Metro",
 							categorizedTrains["Rubber Metro"],
 							"Metro systems with rubber tyres"
+						),
+                        renderCategorySection(
+							"Rubber Metro",
+							categorizedTrains["Rubber Metro"],
+							"Metro systems with rubber tyres"
+						),
+						renderCategorySection(
+							"Automated Rubber Metro",
+							categorizedTrains["Automated Rubber Metro"],
+							"Driverless metro systems with rubber tyres (GoA4)"
 						),
 						renderCategorySection(
 							"Automated Rubber Metro",
