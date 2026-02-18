@@ -112,18 +112,19 @@
         AT_GRADE: 0.8,
         ELEVATED: 1.2
     };
-	
+    
     // --------------------------------------------------
-    // TRAIN TYPES WITH LOCATION DATA
+    // TRAIN TYPES WITH LOCATION DATA AND NEW CATEGORY TAGS
     // --------------------------------------------------
     const REAL_TRAINS = {
-        // Heavy Metro Types (capacity over 700 at minCars)
+        // Standard Metro Types
         "heavy-metro": {
             "id": "heavy-metro",
             "name": "Heavy Metro",
             "description": "For higher capacity routes. Modeled after NYC's R211s",
             "allowAtGradeRoadCrossing": false,
             "manufacturer": "Kawasaki",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 24.7,
                 "maxSpeedLocalStation": 13,
@@ -162,6 +163,7 @@
             "description": "For higher capacity routes. The R188 is a subway EMU built by Kawasaki for the NYC Subway's A Division that entered service in 2013.",
             "allowAtGradeRoadCrossing": false,
             "manufacturer": "Kawasaki",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 24.7,
                 "maxSpeedLocalStation": 13,
@@ -200,6 +202,7 @@
             "description": "For higher capacity routes. The 2024 Tube Stock is a subway EMU built by Siemens Mobility as part of their Inspiro family. It will enter service around mid-2026 on the Picadilly Line.",
             "allowAtGradeRoadCrossing": false,
             "manufacturer": "Siemens",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 27.5,
                 "maxSpeedLocalStation": 13,
@@ -238,6 +241,7 @@
             "description": "For separating the NYC subway into A and B Division Routes. The R179 is a subway EMU built by Bombardier (now Alstom) for the NYC Subway's B Division that entered service in 2019.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Bombardier",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 24.7,
                 "maxSpeedLocalStation": 13,
@@ -276,6 +280,7 @@
             "description": "For higher capacity routes. The FE-10 is a steel-wheeled model of electrical multiple units used on the Mexico City Metro, first used in 2012.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "CAF",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 25.0,
                 "maxSpeedLocalStation": 13,
@@ -308,50 +313,13 @@
                 "city": "Mexico City"
             }
         },
-        "NM-16 (MXC)": {
-            "id": "NM-16 (MXC)",
-            "name": "NM-16 (MXC)",
-            "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The NM-16 is a rubber-tyred model of electrical multiple units used on the Mexico City Metro",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "CAF",
-            "stats": {
-                "maxSpeed": 19.4,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.43,
-                "maxDeceleration": 1.43,
-                "capacityPerCar": 249.0,
-                "carLength": 16.77,
-                "minCars": 9.0,
-                "maxCars": 9.0,
-                "carsPerCarSet": 9.0,
-                "carCost": 2134515,
-                "trainWidth": 3.0,
-                "minStationLength": 200,
-                "maxStationLength": 200,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 600,
-                "carOperationalCostPerHour": 60,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["NM-16 (MXC)"],
-            "appearance": {
-                "color": "#F04E98"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Mexico",
-                "city": "Mexico City"
-            }
-        },
         "Toronto Rocket": {
             "id": "Toronto Rocket",
             "name": "Toronto Rocket",
             "description": "For higher capacity routes. The Toronto Rocket is an EMU built by Bombardier for the Toronto Subway that entered service in 2021.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Bombardier",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 20.8,
                 "maxSpeedLocalStation": 13,
@@ -384,42 +352,43 @@
                 "city": "Toronto"
             }
         },
-        "Azur (MTL)": {
-            "id": "Azur (MTL)",
-            "name": "Azur (MTL)",
-            "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The MPM-10 (Azur) is a rubber-tire vehicle built by Bombardier and Alstom for the Montreal Metro that entered service in 2016.",
+        "R211 (NYC)": {
+            "id": "R211 (NYC)",
+            "name": "R211 (NYC)",
+            "description": "For separating the NYC subway into A and B Division Routes. The R211 is a subway EMU built by Kawasaki for the NYC Subway's B Division that entered service in 2023.",
             "allowAtGradeRoadCrossing": false,
-            "manufacturer": ["Bombardier","Alstom"],
+			"manufacturer": "Kawasaki",
+            "tag": ["Standard Metro"],
             "stats": {
-                "maxSpeed": 20.1,
+                "maxSpeed": 24.7,
                 "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.21,
-                "maxDeceleration": 1.23,
-                "capacityPerCar": 126.0,
-                "carLength": 16.93,
-                "minCars": 9.0,
-                "maxCars": 9.0,
-                "carsPerCarSet": 9.0,
-                "carCost": 1848654,
-                "trainWidth": 2.5,
-                "minStationLength": 190,
-                "maxStationLength": 190,
+                "maxAcceleration": 1.1,
+                "maxDeceleration": 1.3,
+                "capacityPerCar": 240.0,
+                "carLength": 18.35,
+                "minCars": 5.0,
+                "maxCars": 10.0,
+                "carsPerCarSet": 5.0,
+                "carCost": 2700931,
+                "trainWidth": 3.05,
+                "minStationLength": 186,
+                "maxStationLength": 227,
                 "baseTrackCost": 50000,
                 "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 600,
-                "carOperationalCostPerHour": 60,
+                "trainOperationalCostPerHour": 500,
+                "carOperationalCostPerHour": 50,
                 "scissorsCrossoverCost": 15000000
             },
             "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Azur (MTL)"],
+            "compatibleTrackTypes": ["R211 (NYC)"],
             "appearance": {
-                "color": "#0085CA"
+                "color": "#007EC6"
             },
             "isFixed": false,
             "location": {
                 "continent": "North America",
-                "country": "Canada",
-                "city": "Montreal"
+                "country": "US",
+                "city": "New York City"
             }
         },
         "7000 Series (WSH)": {
@@ -428,6 +397,7 @@
             "description": "For higher capacity routes. The 7000-series is a subway EMU built by Kawasaki for Washington DC's Subway that entered service in 2015.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Kawasaki",
+            "tag": ["Standard Metro"],
             "stats": {
                 "maxSpeed": 33.6,
                 "maxSpeedLocalStation": 13,
@@ -461,13 +431,14 @@
             }
         },
 
-        // Light Metro Types (capacity under 700 at minCars)
+        // Automated Metro Types
         "light-metro": {
             "id": "light-metro",
             "name": "Light Metro",
             "description": "Lighter, more flexible transit for moderate capacity routes. Modeled after Montreal's Alstom Metropolis Saint-Laurent",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Alstom",
+            "tag": ["Automated Metro"],
             "stats": {
                 "maxSpeed": 27.8,
                 "maxSpeedLocalStation": 13,
@@ -506,6 +477,7 @@
             "description": "Lighter, more flexible transit for moderate capacity routes. The Hitachi Rail Italy Driverless Metro (formerly AnsaldoBreda) is a fully autonomous EMU family used across the globe. This specific model is based on those used by Copenhagen's Metro since 2002.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Hitachi",
+            "tag": ["Automated Metro"],
             "stats": {
                 "maxSpeed": 25.0,
                 "maxSpeedLocalStation": 13,
@@ -544,6 +516,7 @@
             "description": "Lighter, more flexible transit for moderate capacity routes. The Innovia Metro is an automated rapid transit system family built by Alstom that have been in service across North America since 1985. This specific model is based on the Mark V used in Vancouver since 2025. Acceleration and decceleration are guesstimates.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Alstom",
+            "tag": ["Automated Metro"],
             "stats": {
                 "maxSpeed": 22.2,
                 "maxSpeedLocalStation": 13,
@@ -582,6 +555,7 @@
             "description": "These are light metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The VAL 208 is an autonomous, rubber-tire EMU made by Siemens primarily used in France (Lille, Renne, Toulouse) and has been in service since 2001.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Siemens",
+            "tag": ["Automated Metro"],
             "stats": {
                 "maxSpeed": 22.2,
                 "maxSpeedLocalStation": 13,
@@ -614,14 +588,93 @@
                 "city": "Lille"
             }
         },
+        "NM-16 (MXC)": {
+            "id": "NM-16 (MXC)",
+            "name": "NM-16 (MXC)",
+            "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The NM-16 is a rubber-tyred model of electrical multiple units used on the Mexico City Metro",
+            "allowAtGradeRoadCrossing": false,
+			"manufacturer": "CAF",
+            "tag": ["Automated Metro"],
+            "stats": {
+                "maxSpeed": 19.4,
+                "maxSpeedLocalStation": 13,
+                "maxAcceleration": 1.43,
+                "maxDeceleration": 1.43,
+                "capacityPerCar": 249.0,
+                "carLength": 16.77,
+                "minCars": 9.0,
+                "maxCars": 9.0,
+                "carsPerCarSet": 9.0,
+                "carCost": 2134515,
+                "trainWidth": 3.0,
+                "minStationLength": 200,
+                "maxStationLength": 200,
+                "baseTrackCost": 50000,
+                "baseStationCost": 75000000,
+                "trainOperationalCostPerHour": 600,
+                "carOperationalCostPerHour": 60,
+                "scissorsCrossoverCost": 15000000
+            },
+            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+            "compatibleTrackTypes": ["NM-16 (MXC)"],
+            "appearance": {
+                "color": "#F04E98"
+            },
+            "isFixed": false,
+            "location": {
+                "continent": "North America",
+                "country": "Mexico",
+                "city": "Mexico City"
+            }
+        },
+        "Azur (MTL)": {
+            "id": "Azur (MTL)",
+            "name": "Azur (MTL)",
+            "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The MPM-10 (Azur) is a rubber-tire vehicle built by Bombardier and Alstom for the Montreal Metro that entered service in 2016.",
+            "allowAtGradeRoadCrossing": false,
+            "manufacturer": ["Bombardier","Alstom"],
+            "tag": ["Automated Metro"],
+            "stats": {
+                "maxSpeed": 20.1,
+                "maxSpeedLocalStation": 13,
+                "maxAcceleration": 1.21,
+                "maxDeceleration": 1.23,
+                "capacityPerCar": 126.0,
+                "carLength": 16.93,
+                "minCars": 9.0,
+                "maxCars": 9.0,
+                "carsPerCarSet": 9.0,
+                "carCost": 1848654,
+                "trainWidth": 2.5,
+                "minStationLength": 190,
+                "maxStationLength": 190,
+                "baseTrackCost": 50000,
+                "baseStationCost": 75000000,
+                "trainOperationalCostPerHour": 600,
+                "carOperationalCostPerHour": 60,
+                "scissorsCrossoverCost": 15000000
+            },
+            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+            "compatibleTrackTypes": ["Azur (MTL)"],
+            "appearance": {
+                "color": "#0085CA"
+            },
+            "isFixed": false,
+            "location": {
+                "continent": "North America",
+                "country": "Canada",
+                "city": "Montreal"
+            }
+        },
 
-        // Tram Types (allowAtGradeRoadCrossing: true)
+        // Standard LRT Types
         "S700 (MSP)": {
             "id": "S700 (MSP)",
             "name": "S700 (MSP)",
             "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S700 series are articulated low-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on those recieved in 2020 by Metro Transit in Minnesota.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Siemens",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 24.4,
                 "maxSpeedLocalStation": 6.7,
@@ -660,6 +713,7 @@
             "description": "City tram service modeled after Siemens Avenio.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Siemens",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxAcceleration": 1.2,
                 "maxDeceleration": 1.2,
@@ -696,6 +750,7 @@
             "description": "City tram service. The S700 Streetcar is an articulated low-floor streetcar built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on the streetcar model ordered by OC Streetcar.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Siemens",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 20.0,
                 "maxSpeedLocalStation": 6.7,
@@ -734,6 +789,7 @@
             "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The P3010 is an articulated low-floor light-rail vehicle built by Kinki Sharyo that has been in service in LA since 2016.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Kinki-Sharyo",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 28.9,
                 "maxSpeedLocalStation": 6.7,
@@ -772,6 +828,7 @@
             "description": "City tram service. The S700 series are articulated low-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on the ultra-short model used in San Diego since 2024.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Siemens",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 24.6,
                 "maxSpeedLocalStation": 6.7,
@@ -810,6 +867,7 @@
             "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S200 series are articulated high-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2016. This specific model is based on the model used in Calgary since 2019.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Siemens",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 22.4,
                 "maxSpeedLocalStation": 6.7,
@@ -848,6 +906,7 @@
             "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S200 series are articulated high-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2016. This specific model is based on the model used in San Francisco since 2017.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Siemens",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 22.4,
                 "maxSpeedLocalStation": 6.7,
@@ -880,50 +939,13 @@
                 "city": "San Francisco"
             }
         },
-        "GTW 2/6 (NJT)": {
-            "id": "GTW 2/6 (NJT)",
-            "name": "GTW 2/6 (NJT)",
-            "description": "The diesel light metro is a rare form of transit that is generally used when existing rail can be used but there is no electrification, and heavy rail is not justified. This is a variant of the Stadler GTW 2/6 which is one of the rare and bizarre light rail DMUs and is exclusively in service on NJT's River Line. Details are scarce so the acceleration and braking are guesstimates.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Stadler",
-            "stats": {
-                "maxSpeed": 30.6,
-                "maxSpeedLocalStation": 10,
-                "maxAcceleration": 1.3,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 200.0,
-                "carLength": 31.2,
-                "minCars": 1.0,
-                "maxCars": 2.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2000000,
-                "trainWidth": 2.65,
-                "minStationLength": 65,
-                "maxStationLength": 100,
-                "baseTrackCost": 25000,
-                "baseStationCost": 40000000,
-                "trainOperationalCostPerHour": 300,
-                "carOperationalCostPerHour": 30,
-                "scissorsCrossoverCost": 10000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["GTW 2/6 (NJT)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New Jersey"
-            }
-        },
         "NJT Electric LRV": {
             "id": "NJT Electric LRV",
             "name": "NJT Electric LRV",
             "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. This is an unnamed articulated low-floor light-rail vehicle built by Kinki-Sharyo for New Jersey Transit, specifically Hudson-Bergen Light Rail and Newark Light Rail. It has been in service since 2000.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Kinki-Sharyo",
+            "tag": ["Standard LRT"],
             "stats": {
                 "maxSpeed": 24.4,
                 "maxSpeedLocalStation": 6.7,
@@ -957,13 +979,55 @@
             }
         },
 
-        // Regional Types (description contains "regional" or "commuter rail")
+        // Diesel LRT Types
+        "GTW 2/6 (NJT)": {
+            "id": "GTW 2/6 (NJT)",
+            "name": "GTW 2/6 (NJT)",
+            "description": "The diesel light metro is a rare form of transit that is generally used when existing rail can be used but there is no electrification, and heavy rail is not justified. This is a variant of the Stadler GTW 2/6 which is one of the rare and bizarre light rail DMUs and is exclusively in service on NJT's River Line. Details are scarce so the acceleration and braking are guesstimates.",
+            "allowAtGradeRoadCrossing": true,
+			"manufacturer": "Stadler",
+            "tag": ["Diesel LRT"],
+            "stats": {
+                "maxSpeed": 30.6,
+                "maxSpeedLocalStation": 10,
+                "maxAcceleration": 1.3,
+                "maxDeceleration": 1.3,
+                "capacityPerCar": 200.0,
+                "carLength": 31.2,
+                "minCars": 1.0,
+                "maxCars": 2.0,
+                "carsPerCarSet": 1.0,
+                "carCost": 2000000,
+                "trainWidth": 2.65,
+                "minStationLength": 65,
+                "maxStationLength": 100,
+                "baseTrackCost": 25000,
+                "baseStationCost": 40000000,
+                "trainOperationalCostPerHour": 300,
+                "carOperationalCostPerHour": 30,
+                "scissorsCrossoverCost": 10000000
+            },
+            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+            "compatibleTrackTypes": ["GTW 2/6 (NJT)"],
+            "appearance": {
+                "color": "#000000"
+            },
+            "isFixed": false,
+            "location": {
+                "continent": "North America",
+                "country": "US",
+                "city": "New Jersey"
+            }
+        },
+
+        // Standard Commuter Types
         "M9 (LIRR)": {
             "id": "M9 (LIRR)",
             "name": "M9 (LIRR)",
             "description": "Regional rail is a public rail transport service that operates between towns and cities. In North America, regional rail is often a synonym for commuter rail. The M9 is a commuter rail EMU built by Kawasaki for the Long Island Railroad that entered service in 2009.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Kawasaki",
+            "tag": ["Standard Commuter"],
             "stats": {
                 "maxSpeed": 40.0,
                 "maxSpeedLocalStation": 12,
@@ -1002,6 +1066,7 @@
             "description": "Fast long-distance fully electric train modeled after the Danish IR4. Also known as Litra ER. Built by ABB Scandia in the city of Randers in the years from 1993-1997",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "ABB Scandia",
+            "tag": ["Standard Commuter"],
             "stats": {
                 "maxAcceleration": 0.8,
                 "maxDeceleration": 1.0,
@@ -1032,48 +1097,15 @@
                 "city": "Copenhagen"
             }
         },
-        "LINT 41": {
-            "id": "LINT 41",
-            "name": "LINT 41",
-            "description": "Regional diesel/electric unit for local services. Modelled after the LINT 41",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Alstom",
-            "stats": {
-                "maxAcceleration": 0.6,
-                "maxDeceleration": 0.9,
-                "maxSpeed": 33.3,
-                "maxSpeedLocalStation": 12,
-                "capacityPerCar": 100,
-                "carLength": 20,
-                "minCars": 2,
-                "maxCars": 4,
-                "carsPerCarSet": 2,
-                "carCost": 2000000,
-                "trainWidth": 2.75,
-                "minStationLength": 82,
-                "maxStationLength": 120,
-                "baseTrackCost": 40000,
-                "baseStationCost": 60000000,
-                "trainOperationalCostPerHour": 300,
-                "carOperationalCostPerHour": 30,
-                "scissorsCrossoverCost": 10000000
-            },
-            "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["LINT 41"],
-            "appearance": { color: "#ebd768" },
-            "isFixed": false,
-            location: {
-                "continent": ["Europe","North America"],
-                "country": ["Denmark","Germany","Canada"],
-                "city": ["Copenhagen","Mainz","Frankfurt am Main","Ottawa"]
-            }
-        },
+
+        // Diesel Commuter Types
         "DM30-C3 (LIRR)": {
             "id": "DM30-C3 (LIRR)",
             "name": "DM30-C3 (LIRR)",
             "description": "Regional rail is a public rail transport service that operates between towns and cities. In North America, regional rail is often a synonym for commuter rail. The DM30AC-C3 is a commuter rail Diesel train that entered service in 1993, with coach cars manufacured by Kawasaki powered by an EMD manufactured Diesel locomotive.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Kawasaki",
+            "tag": ["Diesel Commuter"],
             "stats": {
                 "maxSpeed": 42.0,
                 "maxSpeedLocalStation": 12,
@@ -1106,12 +1138,52 @@
                 "city": "New York City"
             }
         },
+        "LINT 41": {
+            "id": "LINT 41",
+            "name": "LINT 41",
+            "description": "Regional diesel/electric unit for local services. Modelled after the LINT 41",
+            "allowAtGradeRoadCrossing": true,
+			"manufacturer": "Alstom",
+            "tag": ["Diesel Commuter"],
+            "stats": {
+                "maxAcceleration": 0.6,
+                "maxDeceleration": 0.9,
+                "maxSpeed": 33.3,
+                "maxSpeedLocalStation": 12,
+                "capacityPerCar": 100,
+                "carLength": 20,
+                "minCars": 2,
+                "maxCars": 4,
+                "carsPerCarSet": 2,
+                "carCost": 2000000,
+                "trainWidth": 2.75,
+                "minStationLength": 82,
+                "maxStationLength": 120,
+                "baseTrackCost": 40000,
+                "baseStationCost": 60000000,
+                "trainOperationalCostPerHour": 300,
+                "carOperationalCostPerHour": 30,
+                "scissorsCrossoverCost": 10000000
+            },
+            "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
+            "compatibleTrackTypes": ["LINT 41"],
+            "appearance": { color: "#ebd768" },
+            "isFixed": false,
+            location: {
+                "continent": ["Europe","North America"],
+                "country": ["Denmark","Germany","Canada"],
+                "city": ["Copenhagen","Mainz","Frankfurt am Main","Ottawa"]
+            }
+        },
+
+        // Standard S-Bahn Types
         "Litra SA (CPH)": {
             "id": "Litra SA (CPH)",
             "name": "Litra SA (CPH)",
             "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The Litra SA is an EMU produced by Alstom and Siemens for the Copenhagen S-Tog system which entered service in 1996.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": ["Siemens","Alstom"],
+            "tag": ["Standard S-Bahn"],
             "stats": {
                 "maxSpeed": 33.3,
                 "maxSpeedLocalStation": 13,
@@ -1150,6 +1222,7 @@
             "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The Siemens Desiro is a family of DMUs and EMUs in service across the world made by Siemens and formerly Ural Locomotives. This specific model is based on Mainline model 'Urban' Varient in service since 2012 on Vienna's S-Bahn.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": "Siemens",
+            "tag": ["Standard S-Bahn"],
             "stats": {
                 "maxSpeed": 44.4,
                 "maxSpeedLocalStation": 13,
@@ -1188,6 +1261,7 @@
             "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The DB Class 483 is an EMU built by Stadler and Siemens for the Berlin S-Bahn that entered service in 2021.",
             "allowAtGradeRoadCrossing": false,
 			"manufacturer": ["Siemens","Stadler"],
+            "tag": ["Standard S-Bahn"],
             "stats": {
                 "maxSpeed": 27.8,
                 "maxSpeedLocalStation": 13,
@@ -1219,50 +1293,12 @@
                 "country": "Germany",
                 "city": "Berlin"
             }
-        },
-        "R211 (NYC)": {
-            "id": "R211 (NYC)",
-            "name": "R211 (NYC)",
-            "description": "For separating the NYC subway into A and B Division Routes. The R211 is a subway EMU built by Kawasaki for the NYC Subway's B Division that entered service in 2023.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Kawasaki",
-            "stats": {
-                "maxSpeed": 24.7,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.1,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 240.0,
-                "carLength": 18.35,
-                "minCars": 5.0,
-                "maxCars": 10.0,
-                "carsPerCarSet": 5.0,
-                "carCost": 2700931,
-                "trainWidth": 3.05,
-                "minStationLength": 186,
-                "maxStationLength": 227,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["R211 (NYC)"],
-            "appearance": {
-                "color": "#007EC6"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New York City"
-            }
         }
     };
 
 
 	// --------------------------------------------------
-    // HYBRID LOCATION + CATEGORY CATEGORIZATION
+    // HYBRID LOCATION + CATEGORY CATEGORIZATION - UPDATED WITH NEW CATEGORIES
     // --------------------------------------------------
     function getTrainCategories() {
         // Build hierarchical location tree
@@ -1275,7 +1311,7 @@
                 return trainDef.tag[0]; // Use first tag as category
             }
             
-            // FALLBACK: Stats-based categorization
+            // FALLBACK: Stats-based categorization (only used if no tag)
             const totalCapacityAtMaxCars = trainDef.stats?.capacityPerCar * trainDef.stats?.maxCars || 0;
             const description = (trainDef.description || "").toLowerCase();
             
@@ -1286,19 +1322,19 @@
                     !description.includes("commuter") &&
                     !description.includes("long-distance") &&
                     !description.includes("s-bahn")) {
-                    return "Tram Types";
+                    return "Standard LRT";
                 } else {
-                    return "Regional Types";
+                    return "Standard Commuter";
                 }
             } else if (description.includes("regional") || 
                        description.includes("commuter") ||
                        description.includes("long-distance") ||
                        description.includes("s-bahn")) {
-                return "Regional Types";
+                return "Standard Commuter";
             } else if (totalCapacityAtMaxCars >= 700) {
-                return "Heavy Metro Types";
+                return "Standard Metro";
             } else {
-                return "Light Metro Types";
+                return "Automated Metro";
             }
         }
         
@@ -1310,7 +1346,7 @@
         };
         
         Object.entries(allTrains).forEach(([trainId, trainDef]) => {
-            // Get location from train data (auto-generated from REAL_TRAINS objects)
+            // Get location from train data
             const location = trainDef.location || {
                 continent: "Uncategorized",
                 country: "Unknown",
@@ -1322,25 +1358,22 @@
             // NEW LOCATION STRUCTURE:
             // continent can be array or string
             // country and city should be paired: country[0] goes with city[0], country[1] with city[1], etc.
-            // This prevents issues like Frankfurt appearing under Denmark
             
             const continents = Array.isArray(location.continent) ? location.continent : [location.continent || "Uncategorized"];
             const countries = Array.isArray(location.country) ? location.country : [location.country || "Unknown"];
             const cities = Array.isArray(location.city) ? location.city : [location.city || "Unknown"];
             
-            // Use the first continent for the tree location (train appears once)
+            // Use the first continent for the tree location
             const firstContinent = continents[0];
             
             // Ensure countries and cities have same length by pairing them correctly
-            // If cities array is shorter, repeat the last city
-            // If cities array is longer, use only as many as there are countries
             const maxLocations = countries.length;
             const pairedLocations = [];
             
             for (let i = 0; i < maxLocations; i++) {
                 pairedLocations.push({
                     country: countries[i],
-                    city: cities[Math.min(i, cities.length - 1)] // Use corresponding city, or last city if array is shorter
+                    city: cities[Math.min(i, cities.length - 1)]
                 });
             }
             
@@ -1358,7 +1391,7 @@
                 locationTree[firstContinent][firstCountry][firstCity][category] = [];
             }
             
-            // Check for duplicates in this specific location
+            // Check for duplicates
             const existingTrain = locationTree[firstContinent][firstCountry][firstCity][category]
                 .find(([id]) => id === trainId);
             if (!existingTrain) {
@@ -1385,7 +1418,8 @@
         enabledTrains: Object.keys(REAL_TRAINS).filter(id => !REAL_TRAINS[id].isFixed),
         customTrains: {},
         customTrainCounter: 0,
-        showEditPanel: false
+        showEditPanel: false,
+        datapackValidationErrors: []
     };
 
     function saveConfig(config) {
@@ -1412,13 +1446,13 @@
         return defaultConfig;
     }
 
-    // Load data from ALL DataPack mods (supports multiple datapacks)
+    // Load data from ALL DataPack mods
     function loadDataFromDataPacks() {
         try {
             const allDataPackTrains = {};
             const datapackKeys = [];
             
-            // Find all datapack keys in localStorage (support multiple datapacks)
+            // Find all datapack keys in localStorage
             for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
                 if (key && key.startsWith('datapacktrains_')) {
@@ -1462,7 +1496,6 @@
                             Object.entries(parsed.trains).forEach(([trainId, trainData]) => {
                                 // Ensure location data exists for DataPack trains
                                 if (!trainData.location) {
-                                    // Try to extract location from ID or description
                                     if (trainId.includes('(NYC)') || trainId.includes('NYC')) {
                                         trainData.location = { continent: "North America", country: "US", city: "New York City" };
                                     } else if (trainId.includes('(LDN)') || trainId.includes('LDN')) {
@@ -1499,6 +1532,22 @@
                                         trainData.location = { continent: "North America", country: "Canada", city: "Vancouver" };
                                     } else {
                                         trainData.location = { continent: "DataPack", country: "Imported", city: "From DataPack" };
+                                    }
+                                }
+                                
+                                // Ensure tag exists for DataPack trains
+                                if (!trainData.tag) {
+                                    // Try to determine category from description or ID
+                                    if (trainData.allowAtGradeRoadCrossing) {
+                                        if (trainData.description && 
+                                            (trainData.description.toLowerCase().includes('diesel') || 
+                                             trainData.description.toLowerCase().includes('dmu'))) {
+                                            trainData.tag = ["Diesel LRT"];
+                                        } else {
+                                            trainData.tag = ["Standard LRT"];
+                                        }
+                                    } else {
+                                        trainData.tag = ["Standard Metro"];
                                     }
                                 }
                                 
@@ -1575,9 +1624,13 @@
                 }
             });
             
+            // Store validation errors so UI can display them
+            currentConfig.datapackValidationErrors = invalidTrains;
+            saveConfig(currentConfig);
+            
             if (invalidTrains.length > 0) {
                 showNotification(
-                    `⚠️ ${invalidTrains.length} datapack train(s) have validation errors. Check console for details.`,
+                    `⚠️ ${invalidTrains.length} datapack train(s) have validation errors. Open Add Trains menu to see details.`,
                     'warning',
                     15000
                 );
@@ -1587,6 +1640,8 @@
                     debugLogMessage("warn", `  ${t.name}: ${t.issue}`);
                 });
             } else {
+                currentConfig.datapackValidationErrors = [];
+                saveConfig(currentConfig);
                 debugLogMessage("log", "All datapack trains validated successfully");
             }
         }
@@ -1646,7 +1701,7 @@
                     `⚠️ Track "${w.trackType}" needs stations ${w.requiredMin}-${w.requiredMax}m. ` +
                     `Incompatible: ${w.incompatible.join(', ')}`,
                     'warning',
-                    8000  // Show for 8 seconds
+                    8000
                 );
             });
             
@@ -1660,11 +1715,14 @@
         return warnings;
     }
     
-    // Auto-fix incompatible track station lengths
+    // AUTO-FIX: Future-proofing station lengths for track compatibility
+    /* AUTO-FIX COMMENTED OUT - Activate when devs has fixed compatibleTrackTypes
     function autoFixTrackCompatibility(trains) {
         const trackGroups = {};
         
         Object.entries(trains).forEach(([id, train]) => {
+            // Skip fixed trains
+            if (train.isFixed) return;
             if (!train.compatibleTrackTypes || !train.stats) return;
             
             train.compatibleTrackTypes.forEach(trackType => {
@@ -1719,6 +1777,7 @@
         
         return fixed;
     }
+    */
 
     // --------------------------------------------------
     // GET TRAINS FOR REGISTRATION
@@ -1764,19 +1823,6 @@
     // --------------------------------------------------
     // TRAIN REGISTRATION WITH VALIDATION
     // --------------------------------------------------
-    function validateTrainLength(train) {
-        if (!train.stats) return true;
-        
-        const maxTrainLength = train.stats.carLength * train.stats.maxCars;
-        const minRequiredLength = train.stats.minStationLength;
-        
-        if (maxTrainLength > (minRequiredLength - 2)) {
-            return false;
-        }
-        
-        return true;
-    }
-
     function registerTrainsToGame() {
         debugLogMessage("log", "=== REGISTERING TRAINS ===");
         
@@ -1789,12 +1835,13 @@
         const trainsApi = api.trains;
         const trains = getTrainsForRegistration();
         
+        // AUTO-FIX KOMMENTERET UD - Aktiver når devs har rettet compatibleTrackTypes
+        /* 
         // Auto-fix track compatibility FIRST
         autoFixTrackCompatibility(trains);
+        */
         
         // Then validate track compatibility
-        
-        // Validate track compatibility BEFORE registering
         const trackWarnings = validateTrackCompatibility(trains);
         if (trackWarnings.length > 0) {
             debugLogMessage("warn", `Found ${trackWarnings.length} track compatibility issue(s)`);
@@ -1825,13 +1872,24 @@
                     return;
                 }
 
-                // Create complete train object (without location data for game registration)
-                const trainForRegistration = deepClone(trainDef);
-                
-                // Remove location data before registering to game (to prevent crashes)
-                delete trainForRegistration.location;
-                
-                debugLogMessage("log", `Registering: ${trainId}`);
+                // Create complete train object
+                const completeTrain = {
+                    id: trainDef.id,
+                    name: trainDef.name,
+                    description: trainDef.description || "",
+                    allowAtGradeRoadCrossing: trainDef.allowAtGradeRoadCrossing !== undefined 
+                        ? trainDef.allowAtGradeRoadCrossing 
+                        : false,
+                    stats: deepClone(trainDef.stats || {}),
+                    elevationMultipliers: deepClone(trainDef.elevationMultipliers || BASE_ELEVATION_MULTIPLIERS),
+                    compatibleTrackTypes: trainDef.compatibleTrackTypes || [trainId],
+                    appearance: deepClone(trainDef.appearance || { color: "#ffffff" })
+                };
+
+                debugLogMessage("log", `Registering: ${trainId}`, {
+                    allowAtGradeRoadCrossing: completeTrain.allowAtGradeRoadCrossing,
+                    elevationMultipliers: completeTrain.elevationMultipliers
+                });
 
                 // Check if exists
                 const exists = existingTrains[trainId];
@@ -1840,16 +1898,16 @@
                     // Try to modify
                     try {
                         if (typeof trainsApi.modifyTrainType === 'function') {
-                            trainsApi.modifyTrainType(trainId, trainForRegistration);
+                            trainsApi.modifyTrainType(trainId, completeTrain);
                             debugLogMessage("log", `Modified: ${trainId}`);
                         } else {
-                            trainsApi.registerTrainType(trainForRegistration);
+                            trainsApi.registerTrainType(completeTrain);
                             debugLogMessage("log", `Registered (fallback): ${trainId}`);
                         }
                     } catch (modifyError) {
                         // If modify fails, try register as new
                         try {
-                            trainsApi.registerTrainType(trainForRegistration);
+                            trainsApi.registerTrainType(completeTrain);
                             debugLogMessage("log", `Registered (after modify failed): ${trainId}`);
                         } catch (registerError) {
                             throw registerError;
@@ -1857,7 +1915,7 @@
                     }
                 } else {
                     // Register new
-                    trainsApi.registerTrainType(trainForRegistration);
+                    trainsApi.registerTrainType(completeTrain);
                     debugLogMessage("log", `Registered new: ${trainId}`);
                 }
                 
@@ -1878,7 +1936,13 @@
                 
                 Object.keys(trains).forEach(trainId => {
                     if (finalTrains[trainId]) {
-                        debugLogMessage("log", `OK ${trainId}`);
+                        const train = finalTrains[trainId];
+                        debugLogMessage("log", `OK ${trainId}`, {
+                            allowAtGradeRoadCrossing: train.allowAtGradeRoadCrossing,
+                            hasElevationMultipliers: !!train.elevationMultipliers,
+                            elevationMultipliers: train.elevationMultipliers,
+                            compatibleTrackTypes: train.compatibleTrackTypes
+                        });
                     } else {
                         debugLogMessage("error", `FAILED ${trainId} NOT FOUND`);
                     }
@@ -1898,6 +1962,21 @@
         return success;
     }
 
+
+    function validateTrainLength(train) {
+        if (!train.stats) return true;
+        
+        const maxTrainLength = train.stats.carLength * train.stats.maxCars;
+        const minRequiredLength = train.stats.minStationLength;
+        
+        if (maxTrainLength > (minRequiredLength - 2)) {
+            return false;
+        }
+        
+        return true;
+    }
+
+
     // --------------------------------------------------
     // CREATE CUSTOM TRAIN
     // --------------------------------------------------
@@ -1909,6 +1988,7 @@
             name: name,
             description: description || "Custom train type",
             allowAtGradeRoadCrossing: false,
+            tag: ["Standard Metro"],
             stats: {
                 maxAcceleration: 1.0,
                 maxDeceleration: 1.0,
@@ -2119,7 +2199,7 @@
                 return someEnabled && !allEnabled;
             };
 
-            // Bulk toggle for nodes (continent, country, city, category)
+            // Bulk toggle for nodes
             const handleBulkToggle = (nodePath, enable) => {
                 const nextEnabled = new Set(enabledTrains);
                 
@@ -2500,7 +2580,7 @@
     }
 
     // --------------------------------------------------
-    // UPDATED ENABLE/DISABLE VIEW WITH HYBRID SELECTOR
+    // UPDATED ENABLE/DISABLE VIEW WITH NEW CATEGORIES
     // --------------------------------------------------
     function createReactUI() {
         const api = window.SubwayBuilderAPI;
@@ -2512,302 +2592,60 @@
             debugLogMessage("error", "React not available");
             return null;
         }
+		// --------------------------------------------------
+		// GLOBAL ERROR CONTEXT
+		// --------------------------------------------------
+		const ErrorContext = React.createContext();
 
-        // Create the hybrid selector
-        const HybridTrainSelector = createHybridTrainSelector(React, components, icons);
+		function ErrorProvider({ children }) {
+			const [errors, setErrors] = React.useState([]);
+			const [showToast, setShowToast] = React.useState(false);
 
-        // Updated EnableDisableView using the hybrid selector
-        function EnableDisableView() {
-            const handleApply = () => {
-                const valid = registerTrainsToGame();
-                if (valid) {
-                    showNotification('Train settings applied successfully!', 'success');
-                }
-            };
+			const addError = (errorMessage) => {
+				setErrors(prev => {
+					const newErrors = [errorMessage, ...prev].slice(0, 5); // Max 5 errors
+					return newErrors;
+				});
+				setShowToast(true);
+				
+				// Auto-hide after 8 seconds
+				setTimeout(() => {
+					setShowToast(false);
+				}, 8000);
+			};
 
-            return React.createElement(HybridTrainSelector, {
-                onApply: handleApply,
-                initialEnabledTrains: currentConfig.enabledTrains || []
-            });
-        }
+			const clearErrors = () => {
+				setErrors([]);
+				setShowToast(false);
+			};
 
-        // Return the component for integration
-        return EnableDisableView;
-    }
+			const value = {
+				errors,
+				showToast,
+				addError,
+				clearErrors
+			};
 
-    // --------------------------------------------------
-    // GET TRAINS FOR REGISTRATION
-    // --------------------------------------------------
-    // function getTrainsForRegistration() {
-    //     const config = currentConfig || loadConfig();
-    //     const trains = {};
-        
-    //     // Always include fixed trains
-    //     Object.entries(REAL_TRAINS).forEach(([trainId, trainDef]) => {
-    //         if (trainDef.isFixed) {
-    //             // Use custom version if exists, otherwise default
-    //             if (config.customTrains && config.customTrains[trainId]) {
-    //                 trains[trainId] = deepClone(config.customTrains[trainId]);
-    //             } else {
-    //                 trains[trainId] = deepClone(trainDef);
-    //             }
-    //         }
-    //     });
-        
-    //     // Include enabled extra trains
-    //     (config.enabledTrains || []).forEach(trainId => {
-    //         if (REAL_TRAINS[trainId] && !REAL_TRAINS[trainId].isFixed) {
-    //             // Use custom version if exists, otherwise default
-    //             if (config.customTrains && config.customTrains[trainId]) {
-    //                 trains[trainId] = deepClone(config.customTrains[trainId]);
-    //             } else {
-    //                 trains[trainId] = deepClone(REAL_TRAINS[trainId]);
-    //             }
-    //         }
-    //     });
-        
-    //     // Include custom trains
-    //     if (config.customTrains) {
-    //         Object.entries(config.customTrains).forEach(([trainId, trainDef]) => {
-    //             if (trainId.startsWith('custom-') && config.enabledTrains?.includes(trainId)) {
-    //                 trains[trainId] = deepClone(trainDef);
-    //             }
-    //         });
-    //     }
-        
-    //     debugLogMessage("log", `Preparing ${Object.keys(trains).length} trains for registration`);
-    //     return trains;
-    // }
+			return React.createElement(ErrorContext.Provider, { value }, children);
+		}
 
-    // --------------------------------------------------
-    // TRAIN REGISTRATION WITH VALIDATION
-    // --------------------------------------------------
-    function validateTrainLength(train) {
-        if (!train.stats) return true;
-        
-        const maxTrainLength = train.stats.carLength * train.stats.maxCars;
-        const minRequiredLength = train.stats.minStationLength;
-        
-        if (maxTrainLength > (minRequiredLength - 2)) {
-            return false;
-        }
-        
-        return true;
-    }
+		function useError() {
+			const context = React.useContext(ErrorContext);
+			if (!context) {
+				throw new Error('useError must be used within ErrorProvider');
+			}
+			return context;
+		}
 
-    function registerTrainsToGame() {
-        debugLogMessage("log", "=== REGISTERING TRAINS ===");
-        
-        const api = window.SubwayBuilderAPI;
-        if (!api || !api.trains) {
-            debugLogMessage("error", "API not available");
-            return false;
-        }
-
-        const trainsApi = api.trains;
-        const trains = getTrainsForRegistration();
-        
-        // Auto-fix track compatibility FIRST
-        autoFixTrackCompatibility(trains);
-        
-        // Then validate track compatibility
-        
-        // Validate track compatibility BEFORE registering
-        const trackWarnings = validateTrackCompatibility(trains);
-        if (trackWarnings.length > 0) {
-            debugLogMessage("warn", `Found ${trackWarnings.length} track compatibility issue(s)`);
-        }
-        
-        let successCount = 0;
-        let failCount = 0;
-        let validationFailed = false;
-
-        // Get existing trains
-        let existingTrains = {};
-        try {
-            if (typeof trainsApi.getTrainTypes === 'function') {
-                existingTrains = trainsApi.getTrainTypes() || {};
-                debugLogMessage("log", `Found ${Object.keys(existingTrains).length} existing trains`);
-            }
-        } catch (e) {
-            debugLogMessage("warn", "Could not get existing trains", e);
-        }
-
-        // Validate and register each train
-        Object.entries(trains).forEach(([trainId, trainDef]) => {
-            try {
-                // Validate train length
-                if (!validateTrainLength(trainDef)) {
-                    validationFailed = true;
-                    failCount++;
-                    return;
-                }
-
-                // Create complete train object
-                const completeTrain = {
-                    id: trainDef.id,
-                    name: trainDef.name,
-                    description: trainDef.description || "",
-                    allowAtGradeRoadCrossing: trainDef.allowAtGradeRoadCrossing !== undefined 
-                        ? trainDef.allowAtGradeRoadCrossing 
-                        : false,
-                    stats: deepClone(trainDef.stats || {}),
-                    elevationMultipliers: deepClone(trainDef.elevationMultipliers || BASE_ELEVATION_MULTIPLIERS),
-                    compatibleTrackTypes: trainDef.compatibleTrackTypes || [trainId],
-                    appearance: deepClone(trainDef.appearance || { color: "#ffffff" })
-                };
-
-                debugLogMessage("log", `Registering: ${trainId}`, {
-                    allowAtGradeRoadCrossing: completeTrain.allowAtGradeRoadCrossing,
-                    elevationMultipliers: completeTrain.elevationMultipliers
-                });
-
-                // Check if exists
-                const exists = existingTrains[trainId];
-                
-                if (exists) {
-                    // Try to modify
-                    try {
-                        if (typeof trainsApi.modifyTrainType === 'function') {
-                            trainsApi.modifyTrainType(trainId, completeTrain);
-                            debugLogMessage("log", `Modified: ${trainId}`);
-                        } else {
-                            trainsApi.registerTrainType(completeTrain);
-                            debugLogMessage("log", `Registered (fallback): ${trainId}`);
-                        }
-                    } catch (modifyError) {
-                        // If modify fails, try register as new
-                        try {
-                            trainsApi.registerTrainType(completeTrain);
-                            debugLogMessage("log", `Registered (after modify failed): ${trainId}`);
-                        } catch (registerError) {
-                            throw registerError;
-                        }
-                    }
-                } else {
-                    // Register new
-                    trainsApi.registerTrainType(completeTrain);
-                    debugLogMessage("log", `Registered new: ${trainId}`);
-                }
-                
-                successCount++;
-                
-            } catch (error) {
-                debugLogMessage("error", `Failed: ${trainId}`, error);
-                failCount++;
-            }
-        });
-
-        // Verification
-        setTimeout(() => {
-            try {
-                const finalTrains = trainsApi.getTrainTypes ? trainsApi.getTrainTypes() : {};
-                debugLogMessage("log", "=== VERIFICATION ===");
-                debugLogMessage("log", `Total trains in game: ${Object.keys(finalTrains).length}`);
-                
-                Object.keys(trains).forEach(trainId => {
-                    if (finalTrains[trainId]) {
-                        const train = finalTrains[trainId];
-                        debugLogMessage("log", `OK ${trainId}`, {
-                            allowAtGradeRoadCrossing: train.allowAtGradeRoadCrossing,
-                            hasElevationMultipliers: !!train.elevationMultipliers,
-                            elevationMultipliers: train.elevationMultipliers,
-                            compatibleTrackTypes: train.compatibleTrackTypes
-                        });
-                    } else {
-                        debugLogMessage("error", `FAILED ${trainId} NOT FOUND`);
-                    }
-                });
-            } catch (e) {
-                debugLogMessage("error", "Verification failed", e);
-            }
-        }, 1000);
-
-        const success = failCount === 0 && !validationFailed;
-        if (validationFailed) {
-            showNotification("Train registration failed: Some trains are too long!", 'error');
-        } else {
-            debugLogMessage(success ? "log" : "error", 
-                `Registration: ${successCount} OK, ${failCount} failed`);
-        }
-        return success;
-    }
-
-    // --------------------------------------------------
-    // CREATE CUSTOM TRAIN
-    // --------------------------------------------------
-    function createCustomTrain(name, description, color) {
-        const trainId = `custom-${++currentConfig.customTrainCounter}`;
-        
-        const newTrain = {
-            id: trainId,
-            name: name,
-            description: description || "Custom train type",
-            allowAtGradeRoadCrossing: false,
-            stats: {
-                maxAcceleration: 1.0,
-                maxDeceleration: 1.0,
-                maxSpeed: 20.0,
-                maxSpeedLocalStation: 10.0,
-                capacityPerCar: 150,
-                carLength: 20,
-                minCars: 2,
-                maxCars: 6,
-                carsPerCarSet: 2,
-                carCost: 2000000,
-                trainWidth: 3.0,
-                minStationLength: 100,
-                maxStationLength: 150,
-                baseTrackCost: 35000,
-                baseStationCost: 50000000,
-                trainOperationalCostPerHour: 300,
-                carOperationalCostPerHour: 30,
-                scissorsCrossoverCost: 10000000
-            },
-            elevationMultipliers: BASE_ELEVATION_MULTIPLIERS,
-            compatibleTrackTypes: [trainId],
-            appearance: { color: color },
-            isFixed: false
-        };
-        
-        if (!currentConfig.customTrains) {
-            currentConfig.customTrains = {};
-        }
-        
-        currentConfig.customTrains[trainId] = newTrain;
-        
-        if (!currentConfig.enabledTrains) {
-            currentConfig.enabledTrains = [];
-        }
-        
-        currentConfig.enabledTrains.push(trainId);
-        saveConfig(currentConfig);
-        
-        debugLogMessage("log", `Custom train created: ${trainId}`);
-        return trainId;
-    }
-
-    // --------------------------------------------------
-    // REACT UI COMPONENTS - UPDATED WITH ORGANIZED ENABLE/DISABLE
-    // --------------------------------------------------
-    function createReactUI() {
-        const api = window.SubwayBuilderAPI;
-        const React = api.utils?.React;
-        const components = api.utils?.components || {};
-        const icons = api.utils?.icons || {};
-        
-        if (!React) {
-            debugLogMessage("error", "React not available");
-            return null;
-        }
 
         // Main Menu Component
         function MainMenuButton() {
             const [isOpen, setIsOpen] = React.useState(false);
-            const [activeView, setActiveView] = React.useState(null); // 'enable', 'edit', 'create'
-            const [selectedTrainForEdit, setSelectedTrainForEdit] = React.useState(null); // Train ID to edit
+            const [activeView, setActiveView] = React.useState(null);
+            const [selectedTrainForEdit, setSelectedTrainForEdit] = React.useState(null);
 			const [hoveredTrain, setHoveredTrain] = React.useState(null);
             const [popupPosition, setPopupPosition] = React.useState({ x: 0, y: 0 });
+            const { errors, showToast, addError, clearErrors } = useError();
 
             const openEnableDisable = () => {
                 setActiveView('enable');
@@ -2823,6 +2661,37 @@
                 setActiveView('create');
                 setIsOpen(true);
             };
+            
+            const handleApplyWithFeedback = () => {
+                // Clear old error
+                clearErrors();
+                
+                // Run registrering function
+                const success = registerTrainsToGame();
+                
+                if (!success) {
+                    // Load error from debugLog
+                    const errorMessages = debugLog
+                        .filter(entry => entry.type === "error")
+                        .slice(0, 5)
+                        .map(e => e.message);
+                    
+                    // add validation error
+                    if (currentConfig.datapackValidationErrors && currentConfig.datapackValidationErrors.length > 0) {
+						currentConfig.datapackValidationErrors.slice(0, 3).forEach(err => {
+							errorMessages.push(`${err.name}: ${err.issue || 'Train too long for station'}`);
+						});
+					}
+                    
+					// Add every error to global error state
+                    errorMessages.forEach(msg => addError(msg));
+					
+					showNotification('An error occurred during train registration', 'error');
+				} else {
+					showNotification('Train updated correctly!', 'success');
+					clearErrors();
+				}
+			};
 
             // Available components or fallbacks
             const Button = components.Button || ((props) => {
@@ -2911,7 +2780,75 @@
                 ]));
             }
 
-            // Enable/Disable View Component - ORGANIZED BY CATEGORIES
+            // TOAST ERROR COMPONENT
+            function ErrorToast() {
+				const { errors, showToast, clearErrors } = useError();
+				
+				if (!showToast || errors.length === 0) return null;
+				
+				return React.createElement('div', {
+					className: 'fixed bottom-4 right-4 z-[9999] w-96 max-w-full animate-in slide-in-from-right-5 duration-300',
+					style: { animation: 'slideInRight 0.3s ease-out' }
+				}, [
+					React.createElement('div', {
+						className: 'bg-destructive/10 border border-destructive/30 rounded-lg shadow-lg backdrop-blur-sm overflow-hidden'
+					}, [
+						// Header
+						React.createElement('div', {
+							className: 'bg-destructive text-destructive-foreground px-4 py-3 font-bold flex items-center gap-2'
+						}, [
+							React.createElement('svg', {
+								xmlns: "http://www.w3.org/2000/svg",
+								width: "20",
+								height: "20",
+								viewBox: "0 0 24 24",
+								fill: "none",
+								stroke: "currentColor",
+								strokeWidth: "2",
+								strokeLinecap: "round",
+								strokeLinejoin: "round",
+								className: "lucide lucide-alert-triangle"
+							}, [
+								React.createElement('path', { d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" }),
+								React.createElement('path', { d: "M12 9v4" }),
+								React.createElement('path', { d: "M12 17h.01" })
+							]),
+							errors.length === 1 ? 'Error' : 'Error during registration'
+						]),
+						
+						// Content
+						React.createElement('div', {
+							className: 'p-4 bg-background/95'
+						}, [
+							React.createElement('ul', {
+								className: 'text-sm space-y-1 list-disc ml-4'
+							}, errors.map((err, i) => 
+								React.createElement('li', { 
+									key: i, 
+									className: 'text-destructive/90'
+								}, err)
+							)),
+							React.createElement('p', {
+								className: 'text-xs text-muted-foreground mt-2 italic border-t pt-2'
+							}, 'Please refer to the log for further details.')
+						]),
+						
+						// Close button
+						React.createElement('div', {
+							className: 'border-t px-4 py-2 bg-muted/30 flex justify-end'
+						}, [
+							React.createElement(Button, {
+								onClick: clearErrors,
+								variant: 'ghost',
+								size: 'sm',
+								className: 'h-7 text-xs'
+							}, 'Close')
+						])
+					])
+				]);
+			}
+
+            // Enable/Disable View Component - UPDATED WITH NEW CATEGORIES
 			function EnableDisableView() {
 				const [enabledTrains, setEnabledTrains] = React.useState(() => {
 					const enabledSet = new Set(currentConfig.enabledTrains || []);
@@ -2932,59 +2869,21 @@
 					
 					return enabledSet;
 				});
+				const { addError } = useError();
 				
-				// Build initial categories dynamically from all trains (including datapack tags)
+				// Build initial categories dynamically from all trains
 				const buildInitialCategories = () => {
-<<<<<<< Updated upstream
-					const categories = { "Fixed Standard Trains": true }; // Always include fixed
-					
-					const allTrainsData = { 
-						...REAL_TRAINS, 
-						...(currentConfig.customTrains || {}),
-						...(currentConfig.dataPackTrains || {})
-					};
-					
-					// Get categories from all trains
-					Object.values(allTrainsData).forEach(train => {
-						// Use tag if present, otherwise fallback to stats-based
-						let category;
-						if (train.tag && Array.isArray(train.tag) && train.tag.length > 0) {
-							category = train.tag[0];
-						} else {
-							// Simplified fallback logic
-							if (train.isFixed) {
-								category = "Fixed Standard Trains";
-							} else if (train.allowAtGradeRoadCrossing) {
-								category = "Tram Types";
-							} else {
-								const capacity = (train.stats?.capacityPerCar || 0) * (train.stats?.maxCars || 1);
-								category = capacity >= 700 ? "Heavy Metro Types" : "Light Metro Types";
-							}
-						}
-						
-						if (category) {
-							categories[category] = true;
-						}
-					});
-=======
 					const categories = { 
                         "Fixed Standard Trains": true,
                         "Standard Metro": true,
                         "Automated Metro": true,
-                        "Rubber Metro": true,
-                        "Automated Rubber Metro": true,
                         "Standard LRT": true,
                         "Diesel LRT": true,
-                        "Rubber LRT": true,
-                        "People Mover": true,
                         "Standard Commuter": true,
-                        "Dual-Mode Commuter": true,
-                        "Hydrogen Commuter": true,
                         "Diesel Commuter": true,
                         "Standard S-Bahn": true,
                         "Automated S-Bahn": true
                     };
->>>>>>> Stashed changes
 					
 					return categories;
 				};
@@ -3014,14 +2913,12 @@
 				const cities = selectedLocation.continent && selectedLocation.country ? 
 					Object.keys(locationTree[selectedLocation.continent]?.[selectedLocation.country] || {}) : [];
 				
-				// Normalize manufacturer names to avoid duplicates
+				// Normalize manufacturer names
 				const normalizeManufacturer = (name) => {
 					if (!name) return name;
 					
-					// Trim whitespace
 					let normalized = name.trim();
 					
-					// Standardize known manufacturers
 					const caseMap = {
 						'abb': 'ABB',
 						'bombardier': 'Bombardier',
@@ -3039,16 +2936,13 @@
 						return caseMap[lower];
 					}
 					
-					// Replace hyphens with spaces for consistency
 					normalized = normalized.replace(/-/g, ' ');
-					
-					// Collapse multiple spaces to single space
 					normalized = normalized.replace(/\s+/g, ' ');
 					
 					return normalized;
 				};
 				
-				// Build list of all manufacturers from all trains
+				// Build list of all manufacturers
 				const manufacturers = React.useMemo(() => {
 					const manufacturerSet = new Set();
 					const allTrainsData = { 
@@ -3058,13 +2952,11 @@
 					};
 					Object.values(allTrainsData).forEach(train => {
 						if (train.manufacturer) {
-							// Handle both single manufacturer and array of manufacturers
 							const trainManufacturers = Array.isArray(train.manufacturer) 
 								? train.manufacturer 
 								: [train.manufacturer];
 							trainManufacturers.forEach(manufacturer => {
 								if (manufacturer) {
-									// Normalize before adding to set
 									const normalized = normalizeManufacturer(manufacturer);
 									manufacturerSet.add(normalized);
 								}
@@ -3115,12 +3007,6 @@
 				// Build categorized trains filtered by selected location
 				const categorizedTrains = {
 					"Fixed Standard Trains": [],
-<<<<<<< Updated upstream
-					"Heavy Metro Types": [],
-					"Light Metro Types": [],
-					"Tram Types": [],
-					"Regional Types": []
-=======
 					"Standard Metro": [],
 					"Automated Metro": [],
 					"Standard LRT": [],
@@ -3128,17 +3014,7 @@
 					"Standard Commuter": [],
 					"Diesel Commuter": [],
 					"Standard S-Bahn": [],
-					"Automated S-Bahn": [],
-                    "Rubber Metro": [],
-                    "Automated Rubber Metro": [],
-                    "People Mover": [],
-                    "Dual-Mode Commuter": [],
-                    "Hydrogen Commuter": [],
-                    "Rubber LRT": []
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+					"Automated S-Bahn": []
 				};
 				
 				// Collect all trains for quick access
@@ -3146,12 +3022,10 @@
 				
 				// Filter trains based on selected location
 				function filterTrainsByLocation() {
-					// Reset categories
 					Object.keys(categorizedTrains).forEach(key => {
 						categorizedTrains[key] = [];
 					});
 					
-					// Clear allTrains
 					Object.keys(allTrains).forEach(key => {
 						delete allTrains[key];
 					});
@@ -3159,9 +3033,7 @@
 					// Helper function to traverse location tree and collect ALL trains
 					function collectAllTrains(node, collected = new Map()) {
 						if (Array.isArray(node)) {
-							// This is a list of trains
 							node.forEach(([trainId, train]) => {
-								// Use Map to avoid duplicates (same train ID)
 								if (!collected.has(trainId)) {
 									collected.set(trainId, train);
 								}
@@ -3169,7 +3041,6 @@
 							return collected;
 						}
 						
-						// This is a location node, recurse through all children
 						Object.values(node).forEach(child => {
 							collectAllTrains(child, collected);
 						});
@@ -3182,7 +3053,6 @@
 					
 					// Now filter the collected trains based on selected location
 					allTrainsMap.forEach((train, trainId) => {
-						// Check continent match - handle both arrays and single values
 						let matchesContinent = !selectedLocation.continent;
 						if (selectedLocation.continent) {
 							const trainContinents = Array.isArray(train.location?.continent)
@@ -3191,14 +3061,12 @@
 							matchesContinent = trainContinents.includes(selectedLocation.continent);
 						}
 
-						// Check country match - handle both arrays and single values, and both codes and full names
 						let matchesCountry = !selectedLocation.country;
 						if (selectedLocation.country) {
 							const trainCountries = Array.isArray(train.location?.country) 
 								? train.location.country 
 								: [train.location?.country || "Unknown"];
 							
-							// Country mapping for matching both codes and full names
 							const countryMap = {
 								'US': 'United States',
 								'CA': 'Canada',
@@ -3206,23 +3074,15 @@
 								'MX': 'Mexico'
 							};
 							
-							// Check if selected country matches any train country (by code or name)
 							matchesCountry = trainCountries.some(trainCountry => {
-								// Direct match
 								if (trainCountry === selectedLocation.country) return true;
-								
-								// Check if selected is a code and train has full name
 								if (countryMap[selectedLocation.country] === trainCountry) return true;
-								
-								// Check if selected is full name and train has code
 								const selectedCode = Object.keys(countryMap).find(code => countryMap[code] === selectedLocation.country);
 								if (selectedCode === trainCountry) return true;
-								
 								return false;
 							});
 						}
 
-						// Check city match - handle both arrays and single values
 						let matchesCity = !selectedLocation.city;
 						if (selectedLocation.city) {
 							const trainCities = Array.isArray(train.location?.city)  
@@ -3231,7 +3091,6 @@
 							matchesCity = trainCities.includes(selectedLocation.city);
 						}
 						
-						// Check manufacturer match - handle both arrays and single values
 						let matchesManufacturer = !selectedLocation.manufacturer;
 						if (selectedLocation.manufacturer) {
 							const trainManufacturers = Array.isArray(train.manufacturer)
@@ -3241,35 +3100,20 @@
 						}
 						
 						if (matchesContinent && matchesCountry && matchesCity && matchesManufacturer) {
-							// Add to allTrains for quick access
 							allTrains[trainId] = train;
 							
-							// Categorize the train
-							const totalCapacityAtMinCars = train.stats?.capacityPerCar * train.stats?.minCars || 0;
-							const description = (train.description || "").toLowerCase();
-							
-							let category = "Heavy Metro Types";
+							// Categorize the train based on tag
+							let category = "Standard Metro";
 							
 							if (train.isFixed) {
 								category = "Fixed Standard Trains";
-							} else if (train.allowAtGradeRoadCrossing) {
-								if (!description.includes("regional") && 
-									!description.includes("commuter") &&
-									!description.includes("long-distance") &&
-									!description.includes("s-bahn")) {
-									category = "Tram Types";
-								} else {
-									category = "Regional Types";
-								}
-							} else if (description.includes("regional") || 
-									   description.includes("commuter") ||
-									   description.includes("long-distance") ||
-									   description.includes("s-bahn")) {
-								category = "Regional Types";
-							} else if (totalCapacityAtMinCars >= 700) {
-								category = "Heavy Metro Types";
-							} else {
-								category = "Light Metro Types";
+							} else if (train.tag && Array.isArray(train.tag) && train.tag.length > 0) {
+								category = train.tag[0];
+							}
+							
+							// Sikre at kategorien eksisterer
+							if (!categorizedTrains[category]) {
+								categorizedTrains[category] = [];
 							}
 							
 							categorizedTrains[category].push([trainId, train]);
@@ -3301,32 +3145,24 @@
 					
 					hoveredTrainRef.current = { trainId, train };
 					
-					// Get mouse position and viewport dimensions
 					const mouseX = e.clientX;
 					const mouseY = e.clientY;
 					const viewportWidth = window.innerWidth;
 					const viewportHeight = window.innerHeight;
 					
-					// Popup dimensions (estimeret)
 					const popupWidth = 360;
-					const popupHeight = 600; // Estimeret højde for stats popup
+					const popupHeight = 600;
 					
-					// Calculate optimal position based on mouse position
 					let popupX, popupY;
 					
-					// Horizontal position: prefer right, but check if enough space
 					if (viewportWidth - mouseX > popupWidth + 20) {
-						// Enough space to the right
 						popupX = mouseX + 15;
 					} else {
-						// Not enough space to the right, show to the left
 						popupX = mouseX - popupWidth - 15;
 					}
 					
-					// Vertical position: center relative to mouse, but keep within viewport
 					popupY = mouseY - (popupHeight / 2);
 					
-					// Ensure popup stays within viewport boundaries
 					popupX = Math.max(10, Math.min(popupX, viewportWidth - popupWidth - 10));
 					popupY = Math.max(10, Math.min(popupY, viewportHeight - popupHeight - 10));
 					
@@ -3336,7 +3172,7 @@
 						if (hoveredTrainRef.current) {
 							setHoveredTrain(hoveredTrainRef.current);
 						}
-					}, 1500); // Increased from 1000ms to 1500ms to make edit button easier to click
+					}, 1500);
 					
 					setHoverTimer(timer);
 				};
@@ -3388,7 +3224,6 @@
 						nextEnabled.delete(trainId);
 						setEnabledTrains(nextEnabled);
 						
-						// Re-filter to update UI
 						filterTrainsByLocation();
 						
 						showNotification(`Train "${trainName}" deleted`, 'success');
@@ -3404,11 +3239,8 @@
 					
 					const next = new Set(enabledTrains);
 					if (next.has(trainId)) {
-						// Disabling - always allowed
 						next.delete(trainId);
 					} else {
-						// Enabling - check 20 trains limit (excluding fixed trains)
-						// Build complete train data source
 						const allTrainsData = { 
 							...REAL_TRAINS, 
 							...(currentConfig.customTrains || {}),
@@ -3420,12 +3252,10 @@
 							return t && !t.isFixed;
 						});
 						
-						// Debug logging
-						debugLogMessage("log", `Non-fixed enabled: ${nonFixedEnabled.length}/20`);
+						debugLogMessage("log", `Non-fixed enabled: ${nonFixedEnabled.length}/15`);
 						
-						if (nonFixedEnabled.length >= 20) {
-							showNotification('Maximum 20 train types can be enabled (excluding fixed trains)', 'error');
-							debugLogMessage("warn", `Limit reached. Current non-fixed trains: ${nonFixedEnabled.map(id => allTrainsData[id]?.name || id).join(', ')}`);
+						if (nonFixedEnabled.length >= 15) {
+							addError('Maximum 15 train types can be enabled (excluding fixed trains)');
 							return;
 						}
 						
@@ -3444,7 +3274,7 @@
 					}));
 				};
 				
-				// Handle edit train - open edit view with selected train
+				// Handle edit train
 				const handleEditTrain = (trainId) => {
 					setSelectedTrainForEdit(trainId);
 					setActiveView('edit');
@@ -3456,7 +3286,7 @@
 						continent: continent || null,
 						country: null,
 						city: null,
-						manufacturer: prev.manufacturer // Preserve manufacturer filter
+						manufacturer: prev.manufacturer
 					}));
 				};
 				
@@ -3539,7 +3369,6 @@
 							])
 						]),
 						React.createElement('div', { className: 'flex items-center gap-2' }, [
-							// Edit button - always visible on hover
 							React.createElement('button', {
 								onClick: (e) => {
 									e.stopPropagation();
@@ -3547,7 +3376,6 @@
 								},
 								onMouseEnter: (e) => {
 									e.stopPropagation();
-									// Cancel any pending hover timer to prevent popup
 									if (hoverTimer) {
 										clearTimeout(hoverTimer);
 										setHoverTimer(null);
@@ -3560,7 +3388,6 @@
 								title: 'Edit train'
 							}, '✏️ Edit'),
 							
-							// Delete button - only for custom trains
 							isCustom && !isFixed && React.createElement('button', {
 								onClick: (e) => {
 									e.stopPropagation();
@@ -3570,7 +3397,6 @@
 								title: 'Delete train'
 							}, '🗑️'),
 							
-							// Enable/disable toggle
 							React.createElement('label', {
 								className: `relative inline-flex items-center ${isFixed ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`
 							}, [
@@ -3599,7 +3425,6 @@
 					const isExpanded = expandedCategories[categoryName];
 					
 					return React.createElement('div', { key: categoryName, className: 'space-y-2' }, [
-						// Category header
 						React.createElement('div', {
 							className: 'category-header px-4 py-3 bg-background/50 rounded border flex items-center cursor-pointer hover:bg-accent/20 transition-colors',
 							onClick: () => toggleCategory(categoryName)
@@ -3623,7 +3448,6 @@
 							])
 						]),
 						
-						// Category content (trains)
 						isExpanded && trains.length > 0 && React.createElement('div', { 
 							className: 'category-content space-y-2 mt-2'
 						}, trains.map(([trainId, train]) => 
@@ -3808,7 +3632,7 @@
 									className: 'text-xs text-muted-foreground hover:text-foreground'
 								}, 'Clear Filter'),
 								
-								// Disable All button
+								// Opdateret Disable All knap med korrekt styling
 								React.createElement('button', {
 									onClick: () => {
 										const allTrainsData = { 
@@ -3832,8 +3656,8 @@
 										showNotification('Disabled all non-fixed trains', 'success');
 										debugLogMessage("log", "Disabled all non-fixed trains");
 									},
-									className: 'text-xs text-destructive hover:text-destructive/80 underline'
-								}, 'Disable All')
+									className: 'inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 rounded-sm'
+								}, 'Disable All Trains')
 							])
 						]),
 						
@@ -3934,54 +3758,24 @@
 							"Always enabled, cannot be disabled"
 						),
 						renderCategorySection(
-							"Heavy Metro Types",
-							categorizedTrains["Heavy Metro Types"],
-							"High capacity transit for urban corridors"
+							"Standard Metro",
+							categorizedTrains["Standard Metro"],
+							"Conventional metro systems with steel wheels"
 						),
 						renderCategorySection(
-							"Light Metro Types",
-							categorizedTrains["Light Metro Types"],
-							"Lighter capacity for flexible urban transit"
-						),
-                        renderCategorySection(
-							"Rubber Metro",
-							categorizedTrains["Rubber Metro"],
-							"Metro systems with rubber tyres"
-						),
-                        renderCategorySection(
-							"Rubber Metro",
-							categorizedTrains["Rubber Metro"],
-							"Metro systems with rubber tyres"
+							"Automated Metro",
+							categorizedTrains["Automated Metro"],
+							"Driverless metro systems (GoA4)"
 						),
 						renderCategorySection(
-							"Automated Rubber Metro",
-							categorizedTrains["Automated Rubber Metro"],
-							"Driverless metro systems with rubber tyres (GoA4)"
+							"Standard LRT",
+							categorizedTrains["Standard LRT"],
+							"Light rail and tram systems"
 						),
 						renderCategorySection(
-							"Automated Rubber Metro",
-							categorizedTrains["Automated Rubber Metro"],
-							"Driverless metro systems with rubber tyres (GoA4)"
-						),
-						renderCategorySection(
-							"Tram Types",
-							categorizedTrains["Tram Types"],
-							"Street-running and at-grade crossing capable"
-						),
-						renderCategorySection(
-<<<<<<< Updated upstream
-							"Regional Types",
-							categorizedTrains["Regional Types"],
-							"Commuter rail and regional services"
-=======
 							"Diesel LRT",
 							categorizedTrains["Diesel LRT"],
 							"Diesel-powered light rail vehicles"
-						),
-                        renderCategorySection(
-							"Rubber LRT",
-							categorizedTrains["Diesel LRT"],
-							"Light rail and tram systems with rubber tyres"
 						),
 						renderCategorySection(
 							"Standard Commuter",
@@ -3993,16 +3787,6 @@
 							categorizedTrains["Diesel Commuter"],
 							"Diesel-powered commuter trains"
 						),
-                        renderCategorySection(
-							"Dual-Mode Commuter",
-							categorizedTrains["Dual-Mode Commuter"],
-							"Diesel and Electric hybrid commuter trains"
-						),
-                        renderCategorySection(
-							"Hydrogen Commuter",
-							categorizedTrains["Hydrogen Commuter"],
-							"Hydrogen-powered commuter trains"
-						),
 						renderCategorySection(
 							"Standard S-Bahn",
 							categorizedTrains["Standard S-Bahn"],
@@ -4012,7 +3796,6 @@
 							"Automated S-Bahn",
 							categorizedTrains["Automated S-Bahn"],
 							"Driverless S-Bahn systems"
->>>>>>> Stashed changes
 						)
 					]),
 					
@@ -4030,7 +3813,7 @@
 								className: 'flex-1'
 							}, 'Back'),
 							React.createElement(Button, {
-								onClick: handleApply,
+								onClick: handleApplyWithFeedback, // Brug den nye handler med feedback
 								className: 'flex-1'
 							}, 'Apply Changes')
 						])
@@ -5527,16 +5310,20 @@
                 ]));
             }
 
-            // Main menu view (shown when no active view selected)
+            // Main menu view
             function MainMenuView() {
 				const trainCategories = getTrainCategories();
 				
-				// Calculate total trains by traversing the location tree
+				// Calculate total trains
 				let totalTrains = 0;
-				let heavyMetroCount = 0;
-				let lightMetroCount = 0;
-				let tramCount = 0;
-				let regionalCount = 0;
+				let standardMetroCount = 0;
+				let automatedMetroCount = 0;
+				let standardLRTCount = 0;
+				let dieselLRTCount = 0;
+				let standardCommuterCount = 0;
+				let dieselCommuterCount = 0;
+				let standardSBahnCount = 0;
+				let automatedSBahnCount = 0;
 				let fixedCount = 0;
 				
 				// Helper function to traverse the tree and count trains
@@ -5564,17 +5351,29 @@
 									case "Fixed Standard Trains":
 										fixedCount += trainCount;
 										break;
-									case "Heavy Metro Types":
-										heavyMetroCount += trainCount;
+									case "Standard Metro":
+										standardMetroCount += trainCount;
 										break;
-									case "Light Metro Types":
-										lightMetroCount += trainCount;
+									case "Automated Metro":
+										automatedMetroCount += trainCount;
 										break;
-									case "Tram Types":
-										tramCount += trainCount;
+									case "Standard LRT":
+										standardLRTCount += trainCount;
 										break;
-									case "Regional Types":
-										regionalCount += trainCount;
+									case "Diesel LRT":
+										dieselLRTCount += trainCount;
+										break;
+									case "Standard Commuter":
+										standardCommuterCount += trainCount;
+										break;
+									case "Diesel Commuter":
+										dieselCommuterCount += trainCount;
+										break;
+									case "Standard S-Bahn":
+										standardSBahnCount += trainCount;
+										break;
+									case "Automated S-Bahn":
+										automatedSBahnCount += trainCount;
 										break;
 								}
 							});
@@ -5605,7 +5404,7 @@
                             React.createElement('div', { className: 'grid grid-cols-2 gap-4' }, [
                                 React.createElement('div', { className: 'space-y-1' }, [
                                     React.createElement('div', { className: 'text-2xl font-bold' }, 
-                                        Object.keys(currentConfig.enabledTrains || []).length
+                                        enabledTrainsCount
                                     ),
                                     React.createElement('div', { className: 'text-xs text-muted-foreground' }, 'Enabled Trains')
                                 ]),
@@ -5617,11 +5416,45 @@
                                 ])
                             ]),
                             React.createElement('div', { className: 'mt-4 text-xs text-muted-foreground grid grid-cols-2 gap-2' }, [
-								React.createElement('div', {}, `Heavy Metro: ${heavyMetroCount}`),
-								React.createElement('div', {}, `Light Metro: ${lightMetroCount}`),
-								React.createElement('div', {}, `Tram Types: ${tramCount}`),
-								React.createElement('div', {}, `Regional: ${regionalCount}`)
+								React.createElement('div', {}, `Standard Metro: ${standardMetroCount}`),
+								React.createElement('div', {}, `Automated Metro: ${automatedMetroCount}`),
+								React.createElement('div', {}, `Standard LRT: ${standardLRTCount}`),
+								React.createElement('div', {}, `Diesel LRT: ${dieselLRTCount}`),
+								React.createElement('div', {}, `Standard Commuter: ${standardCommuterCount}`),
+								React.createElement('div', {}, `Diesel Commuter: ${dieselCommuterCount}`),
+								React.createElement('div', {}, `Standard S-Bahn: ${standardSBahnCount}`),
+								React.createElement('div', {}, `Automated S-Bahn: ${automatedSBahnCount}`)
 							])
+                        ]),
+
+                        // DataPack validation warnings
+                        (currentConfig.datapackValidationErrors && currentConfig.datapackValidationErrors.length > 0) &&
+                        React.createElement(Card, { 
+                            key: 'validation-warnings',
+                            className: 'p-4 border-destructive bg-destructive/10' 
+                        }, [
+                            React.createElement('div', { className: 'flex items-start gap-2' }, [
+                                React.createElement('div', { className: 'text-destructive font-bold text-sm' }, '⚠️'),
+                                React.createElement('div', { className: 'flex-1' }, [
+                                    React.createElement('div', { className: 'text-sm font-semibold text-destructive' }, 
+                                        `${currentConfig.datapackValidationErrors.length} DataPack Train(s) Have Errors`
+                                    ),
+                                    React.createElement('div', { className: 'text-xs text-muted-foreground mt-1' }, 
+                                        'These trains are too long for their station length and will not work in-game.'
+                                    ),
+                                    React.createElement('div', { className: 'mt-2 space-y-1 text-xs' }, 
+                                        currentConfig.datapackValidationErrors.slice(0, 5).map((err, i) =>
+                                            React.createElement('div', { key: i, className: 'text-destructive/90' }, 
+                                                `• ${err.name}: ${err.maxLength?.toFixed(1)}m train > ${(err.minStation - 2)?.toFixed(1)}m station`
+                                            )
+                                        )
+                                    ),
+                                    currentConfig.datapackValidationErrors.length > 5 &&
+                                    React.createElement('div', { className: 'text-xs text-muted-foreground mt-1' }, 
+                                        `...and ${currentConfig.datapackValidationErrors.length - 5} more`
+                                    )
+                                ])
+                            ])
                         ])
                     ]),
 
@@ -5747,7 +5580,7 @@
                             className: 'space-y-2 mt-auto'
                         }, [
                             React.createElement(Button, {
-                                onClick: registerTrainsToGame,
+                                onClick: handleApplyWithFeedback, // Brug den nye handler med feedback
                                 className: 'w-full'
                             }, 'Apply All Train Changes')
                         ])
@@ -5778,12 +5611,11 @@
             }
 
             return React.createElement(React.Fragment, null, [
-                // Main button (unchanged as requested)
+                // Main button
                 React.createElement('div', {
                     key: 'button-container',
                     className: 'flex flex-col gap-1'
                 }, [
-                    // Button element
                     React.createElement('div', {
                         key: 'button',
                         onClick: () => {
@@ -5797,7 +5629,6 @@
                             borderRadius: '0'
                         }
                     }, [
-                        // Text container
                         React.createElement('div', {
                             key: 'text-container',
                             className: 'flex gap-1 items-center px-1'
@@ -5808,7 +5639,6 @@
                             }, 'Add Trains')
                         ]),
                         
-                        // Icon container
                         React.createElement(TrainIcon, {
                             key: 'icon',
                             className: 'min-w-fit transition-all h-9 w-9 ml-1 group-hover:scale-110',
@@ -5818,7 +5648,6 @@
                         })
                     ]),
                     
-                    // Description under the button
                     React.createElement('p', {
                         key: 'description',
                         className: 'text-xs text-muted-foreground pl-1 truncate'
@@ -5826,14 +5655,19 @@
                 ]),
                 
                 // Fullscreen content
-                isOpen && content
+                isOpen && content,
+                
+                // Error Toast in lower right corner
+                React.createElement(ErrorToast, { key: 'error-toast' })
             ]);
         }
 
-        return MainMenuButton;
+        return function WrappedMainMenuButton() {
+			return React.createElement(ErrorProvider, null, 
+				React.createElement(MainMenuButton, {})
+			);
+		};
     }
-
-    
 	
     // --------------------------------------------------
     // INITIALIZATION
