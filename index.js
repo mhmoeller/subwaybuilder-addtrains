@@ -2935,6 +2935,7 @@
 				
 				// Build initial categories dynamically from all trains (including datapack tags)
 				const buildInitialCategories = () => {
+<<<<<<< Updated upstream
 					const categories = { "Fixed Standard Trains": true }; // Always include fixed
 					
 					const allTrainsData = { 
@@ -2965,6 +2966,25 @@
 							categories[category] = true;
 						}
 					});
+=======
+					const categories = { 
+                        "Fixed Standard Trains": true,
+                        "Standard Metro": true,
+                        "Automated Metro": true,
+                        "Rubber Metro": true,
+                        "Automated Rubber Metro": true,
+                        "Standard LRT": true,
+                        "Diesel LRT": true,
+                        "Rubber LRT": true,
+                        "People Mover": true,
+                        "Standard Commuter": true,
+                        "Dual-Mode Commuter": true,
+                        "Hydrogen Commuter": true,
+                        "Diesel Commuter": true,
+                        "Standard S-Bahn": true,
+                        "Automated S-Bahn": true
+                    };
+>>>>>>> Stashed changes
 					
 					return categories;
 				};
@@ -3095,10 +3115,27 @@
 				// Build categorized trains filtered by selected location
 				const categorizedTrains = {
 					"Fixed Standard Trains": [],
+<<<<<<< Updated upstream
 					"Heavy Metro Types": [],
 					"Light Metro Types": [],
 					"Tram Types": [],
 					"Regional Types": []
+=======
+					"Standard Metro": [],
+					"Automated Metro": [],
+					"Standard LRT": [],
+					"Diesel LRT": [],
+					"Standard Commuter": [],
+					"Diesel Commuter": [],
+					"Standard S-Bahn": [],
+					"Automated S-Bahn": [],
+                    "Rubber Metro": [],
+                    "Automated Rubber Metro": [],
+                    "People Mover": [],
+                    "Dual-Mode Commuter": [],
+                    "Hydrogen Commuter": [],
+                    "Rubber LRT": []
+>>>>>>> Stashed changes
 				};
 				
 				// Collect all trains for quick access
@@ -3903,15 +3940,66 @@
 							categorizedTrains["Light Metro Types"],
 							"Lighter capacity for flexible urban transit"
 						),
+                        renderCategorySection(
+							"Rubber Metro",
+							categorizedTrains["Rubber Metro"],
+							"Metro systems with rubber tyres"
+						),
+						renderCategorySection(
+							"Automated Rubber Metro",
+							categorizedTrains["Automated Rubber Metro"],
+							"Driverless metro systems with rubber tyres (GoA4)"
+						),
 						renderCategorySection(
 							"Tram Types",
 							categorizedTrains["Tram Types"],
 							"Street-running and at-grade crossing capable"
 						),
 						renderCategorySection(
+<<<<<<< Updated upstream
 							"Regional Types",
 							categorizedTrains["Regional Types"],
 							"Commuter rail and regional services"
+=======
+							"Diesel LRT",
+							categorizedTrains["Diesel LRT"],
+							"Diesel-powered light rail vehicles"
+						),
+                        renderCategorySection(
+							"Rubber LRT",
+							categorizedTrains["Diesel LRT"],
+							"Light rail and tram systems with rubber tyres"
+						),
+						renderCategorySection(
+							"Standard Commuter",
+							categorizedTrains["Standard Commuter"],
+							"Electric commuter and regional rail"
+						),
+						renderCategorySection(
+							"Diesel Commuter",
+							categorizedTrains["Diesel Commuter"],
+							"Diesel-powered commuter trains"
+						),
+                        renderCategorySection(
+							"Dual-Mode Commuter",
+							categorizedTrains["Dual-Mode Commuter"],
+							"Diesel and Electric hybrid commuter trains"
+						),
+                        renderCategorySection(
+							"Hydrogen Commuter",
+							categorizedTrains["Hydrogen Commuter"],
+							"Hydrogen-powered commuter trains"
+						),
+						renderCategorySection(
+							"Standard S-Bahn",
+							categorizedTrains["Standard S-Bahn"],
+							"S-Bahn / hybrid commuter-rapid transit"
+						),
+						renderCategorySection(
+							"Automated S-Bahn",
+							categorizedTrains["Automated S-Bahn"],
+							"Driverless S-Bahn systems"
+>>>>>>> Stashed changes
 						)
 					]),
 					
