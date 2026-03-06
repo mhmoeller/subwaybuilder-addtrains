@@ -124,7 +124,7 @@
             "description": "For higher capacity routes. Modeled after NYC's R211s",
             "allowAtGradeRoadCrossing": false,
             "manufacturer": "Kawasaki",
-            "tag": ["Standard Metro"],
+            "tag": ["Metro"],
             "stats": {
                 "maxSpeed": 24.7,
                 "maxSpeedLocalStation": 13,
@@ -143,7 +143,14 @@
                 "baseStationCost": 75000000,
                 "trainOperationalCostPerHour": 500,
                 "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
+                "scissorsCrossoverCost": 15000000,
+                "stopTimeSeconds": 35,
+				"parallelTrackSpacing": 2.52,
+				"trackClearance": 1.21,
+				"maxLateralAcceleration": 1.0,
+				"minTurnRadius": 80,
+				"minStationTurnRadius": 426,
+				"maxSlopePercentage": 5.5
             },
             "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
             "compatibleTrackTypes": ["heavy-metro"],
@@ -157,279 +164,279 @@
                 "city": "New York City"
             }
         },
-        "R188 (NYC)": {
-            "id": "R188 (NYC)",
-            "name": "R188 (NYC)",
-            "description": "For higher capacity routes. The R188 is a subway EMU built by Kawasaki for the NYC Subway's A Division that entered service in 2013.",
-            "allowAtGradeRoadCrossing": false,
-            "manufacturer": "Kawasaki",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 24.7,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.1,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 188.0,
-                "carLength": 15.65,
-                "minCars": 5.0,
-                "maxCars": 10.0,
-                "carsPerCarSet": 5.0,
-                "carCost": 2500000,
-                "trainWidth": 2.65,
-                "minStationLength": 159,
-                "maxStationLength": 200,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["R188 (NYC)"],
-            "appearance": {
-                "color": "#AF378B"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New York City"
-            }
-        },
-        "2024 Stock (LDN)": {
-            "id": "2024 Stock (LDN)",
-            "name": "2024 Stock (LDN)",
-            "description": "For higher capacity routes. The 2024 Tube Stock is a subway EMU built by Siemens Mobility as part of their Inspiro family. It will enter service around mid-2026 on the Picadilly Line.",
-            "allowAtGradeRoadCrossing": false,
-            "manufacturer": "Siemens",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 27.5,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.4,
-                "maxDeceleration": 1.4,
-                "capacityPerCar": 116.0,
-                "carLength": 12.63,
-                "minCars": 9.0,
-                "maxCars": 9.0,
-                "carsPerCarSet": 9.0,
-                "carCost": 2000000,
-                "trainWidth": 2.65,
-                "minStationLength": 160,
-                "maxStationLength": 160,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Tube 2024 (LDN)"],
-            "appearance": {
-                "color": "#1B3F94"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "Europe",
-                "country": "UK",
-                "city": "London"
-            }
-        },
-        "R179 (NYC)": {
-            "id": "R179 (NYC)",
-            "name": "R179 (NYC)",
-            "description": "For separating the NYC subway into A and B Division Routes. The R179 is a subway EMU built by Bombardier (now Alstom) for the NYC Subway's B Division that entered service in 2019.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Bombardier",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 24.7,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.1,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 240.0,
-                "carLength": 18.4,
-                "minCars": 4.0,
-                "maxCars": 8.0,
-                "carsPerCarSet": 4.0,
-                "carCost": 2000000,
-                "trainWidth": 3.05,
-                "minStationLength": 150,
-                "maxStationLength": 220,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["R179 (NYC)"],
-            "appearance": {
-                "color": "#A7752A"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New York City"
-            }
-        },
-        "FE-10 (MXC)": {
-            "id": "FE-10 (MXC)",
-            "name": "FE-10 (MXC)",
-            "description": "For higher capacity routes. The FE-10 is a steel-wheeled model of electrical multiple units used on the Mexico City Metro, first used in 2012.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "CAF",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 25.0,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.2,
-                "maxDeceleration": 1.2,
-                "capacityPerCar": 210.0,
-                "carLength": 20.14,
-                "minCars": 7.0,
-                "maxCars": 7.0,
-                "carsPerCarSet": 7.0,
-                "carCost": 5580690,
-                "trainWidth": 3.05,
-                "minStationLength": 180,
-                "maxStationLength": 180,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["FE-10 (MXC)"],
-            "appearance": {
-                "color": "#B0A32A"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Mexico",
-                "city": "Mexico City"
-            }
-        },
-        "Toronto Rocket": {
-            "id": "Toronto Rocket",
-            "name": "Toronto Rocket",
-            "description": "For higher capacity routes. The Toronto Rocket is an EMU built by Bombardier for the Toronto Subway that entered service in 2021.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Bombardier",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 20.8,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 0.9,
-                "maxDeceleration": 1.35,
-                "capacityPerCar": 174.0,
-                "carLength": 23.0,
-                "minCars": 4.0,
-                "maxCars": 6.0,
-                "carsPerCarSet": 2.0,
-                "carCost": 2000000,
-                "trainWidth": 3.2,
-                "minStationLength": 140,
-                "maxStationLength": 180,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Toronto Rocket"],
-            "appearance": {
-                "color": "#DA251D"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Canada",
-                "city": "Toronto"
-            }
-        },
-        "R211 (NYC)": {
-            "id": "R211 (NYC)",
-            "name": "R211 (NYC)",
-            "description": "For separating the NYC subway into A and B Division Routes. The R211 is a subway EMU built by Kawasaki for the NYC Subway's B Division that entered service in 2023.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Kawasaki",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 24.7,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.1,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 240.0,
-                "carLength": 18.35,
-                "minCars": 5.0,
-                "maxCars": 10.0,
-                "carsPerCarSet": 5.0,
-                "carCost": 2700931,
-                "trainWidth": 3.05,
-                "minStationLength": 186,
-                "maxStationLength": 227,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["R211 (NYC)"],
-            "appearance": {
-                "color": "#007EC6"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New York City"
-            }
-        },
-        "7000 Series (WSH)": {
-            "id": "7000 Series (WSH)",
-            "name": "7000 Series (WSH)",
-            "description": "For higher capacity routes. The 7000-series is a subway EMU built by Kawasaki for Washington DC's Subway that entered service in 2015.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Kawasaki",
-            "tag": ["Standard Metro"],
-            "stats": {
-                "maxSpeed": 33.6,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.25,
-                "maxDeceleration": 0.98,
-                "capacityPerCar": 175.0,
-                "carLength": 22.86,
-                "minCars": 4.0,
-                "maxCars": 8.0,
-                "carsPerCarSet": 2.0,
-                "carCost": 2765152,
-                "trainWidth": 3.2,
-                "minStationLength": 185,
-                "maxStationLength": 220,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["7000 Series (WSH)"],
-            "appearance": {
-                "color": "#231F20"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "Washington DC"
-            }
-        },
+        // "R188 (NYC)": {
+        //     "id": "R188 (NYC)",
+        //     "name": "R188 (NYC)",
+        //     "description": "For higher capacity routes. The R188 is a subway EMU built by Kawasaki for the NYC Subway's A Division that entered service in 2013.",
+        //     "allowAtGradeRoadCrossing": false,
+        //     "manufacturer": "Kawasaki",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 24.7,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.1,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 188.0,
+        //         "carLength": 15.65,
+        //         "minCars": 5.0,
+        //         "maxCars": 10.0,
+        //         "carsPerCarSet": 5.0,
+        //         "carCost": 2500000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 159,
+        //         "maxStationLength": 200,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["R188 (NYC)"],
+        //     "appearance": {
+        //         "color": "#AF378B"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "New York City"
+        //     }
+        // },
+        // "2024 Stock (LDN)": {
+        //     "id": "2024 Stock (LDN)",
+        //     "name": "2024 Stock (LDN)",
+        //     "description": "For higher capacity routes. The 2024 Tube Stock is a subway EMU built by Siemens Mobility as part of their Inspiro family. It will enter service around mid-2026 on the Picadilly Line.",
+        //     "allowAtGradeRoadCrossing": false,
+        //     "manufacturer": "Siemens",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 27.5,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.4,
+        //         "maxDeceleration": 1.4,
+        //         "capacityPerCar": 116.0,
+        //         "carLength": 12.63,
+        //         "minCars": 9.0,
+        //         "maxCars": 9.0,
+        //         "carsPerCarSet": 9.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 160,
+        //         "maxStationLength": 160,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Tube 2024 (LDN)"],
+        //     "appearance": {
+        //         "color": "#1B3F94"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "Europe",
+        //         "country": "UK",
+        //         "city": "London"
+        //     }
+        // },
+        // "R179 (NYC)": {
+        //     "id": "R179 (NYC)",
+        //     "name": "R179 (NYC)",
+        //     "description": "For separating the NYC subway into A and B Division Routes. The R179 is a subway EMU built by Bombardier (now Alstom) for the NYC Subway's B Division that entered service in 2019.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Bombardier",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 24.7,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.1,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 240.0,
+        //         "carLength": 18.4,
+        //         "minCars": 4.0,
+        //         "maxCars": 8.0,
+        //         "carsPerCarSet": 4.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 3.05,
+        //         "minStationLength": 150,
+        //         "maxStationLength": 220,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["R179 (NYC)"],
+        //     "appearance": {
+        //         "color": "#A7752A"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "New York City"
+        //     }
+        // },
+        // "FE-10 (MXC)": {
+        //     "id": "FE-10 (MXC)",
+        //     "name": "FE-10 (MXC)",
+        //     "description": "For higher capacity routes. The FE-10 is a steel-wheeled model of electrical multiple units used on the Mexico City Metro, first used in 2012.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "CAF",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 25.0,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.2,
+        //         "maxDeceleration": 1.2,
+        //         "capacityPerCar": 210.0,
+        //         "carLength": 20.14,
+        //         "minCars": 7.0,
+        //         "maxCars": 7.0,
+        //         "carsPerCarSet": 7.0,
+        //         "carCost": 5580690,
+        //         "trainWidth": 3.05,
+        //         "minStationLength": 180,
+        //         "maxStationLength": 180,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["FE-10 (MXC)"],
+        //     "appearance": {
+        //         "color": "#B0A32A"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "Mexico",
+        //         "city": "Mexico City"
+        //     }
+        // },
+        // "Toronto Rocket": {
+        //     "id": "Toronto Rocket",
+        //     "name": "Toronto Rocket",
+        //     "description": "For higher capacity routes. The Toronto Rocket is an EMU built by Bombardier for the Toronto Subway that entered service in 2021.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Bombardier",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 20.8,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 0.9,
+        //         "maxDeceleration": 1.35,
+        //         "capacityPerCar": 174.0,
+        //         "carLength": 23.0,
+        //         "minCars": 4.0,
+        //         "maxCars": 6.0,
+        //         "carsPerCarSet": 2.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 3.2,
+        //         "minStationLength": 140,
+        //         "maxStationLength": 180,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Toronto Rocket"],
+        //     "appearance": {
+        //         "color": "#DA251D"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "Canada",
+        //         "city": "Toronto"
+        //     }
+        // },
+        // "R211 (NYC)": {
+        //     "id": "R211 (NYC)",
+        //     "name": "R211 (NYC)",
+        //     "description": "For separating the NYC subway into A and B Division Routes. The R211 is a subway EMU built by Kawasaki for the NYC Subway's B Division that entered service in 2023.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Kawasaki",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 24.7,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.1,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 240.0,
+        //         "carLength": 18.35,
+        //         "minCars": 5.0,
+        //         "maxCars": 10.0,
+        //         "carsPerCarSet": 5.0,
+        //         "carCost": 2700931,
+        //         "trainWidth": 3.05,
+        //         "minStationLength": 186,
+        //         "maxStationLength": 227,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["R211 (NYC)"],
+        //     "appearance": {
+        //         "color": "#007EC6"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "New York City"
+        //     }
+        // },
+        // "7000 Series (WSH)": {
+        //     "id": "7000 Series (WSH)",
+        //     "name": "7000 Series (WSH)",
+        //     "description": "For higher capacity routes. The 7000-series is a subway EMU built by Kawasaki for Washington DC's Subway that entered service in 2015.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Kawasaki",
+        //     "tag": ["Standard Metro"],
+        //     "stats": {
+        //         "maxSpeed": 33.6,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.25,
+        //         "maxDeceleration": 0.98,
+        //         "capacityPerCar": 175.0,
+        //         "carLength": 22.86,
+        //         "minCars": 4.0,
+        //         "maxCars": 8.0,
+        //         "carsPerCarSet": 2.0,
+        //         "carCost": 2765152,
+        //         "trainWidth": 3.2,
+        //         "minStationLength": 185,
+        //         "maxStationLength": 220,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["7000 Series (WSH)"],
+        //     "appearance": {
+        //         "color": "#231F20"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "Washington DC"
+        //     }
+        // },
 
         // Automated Metro Types
         "light-metro": {
@@ -457,7 +464,14 @@
                 "baseStationCost": 50000000,
                 "trainOperationalCostPerHour": 400,
                 "carOperationalCostPerHour": 40,
-                "scissorsCrossoverCost": 12000000
+                "scissorsCrossoverCost": 12000000,
+				"stopTimeSeconds": 32,
+				"parallelTrackSpacing": 2.42,
+				"trackClearance": 1.16,
+				"maxLateralAcceleration": 1.0,
+				"minTurnRadius": 86,
+				"minStationTurnRadius": 1820,
+				"maxSlopePercentage": 5.5,
             },
             "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
             "compatibleTrackTypes": ["light-metro"],
@@ -471,554 +485,554 @@
                 "city": "Montreal"
             }
         },
-        "AnsaldoBreda (CPH)": {
-            "id": "AnsaldoBreda (CPH)",
-            "name": "AnsaldoBreda (CPH)",
-            "description": "Lighter, more flexible transit for moderate capacity routes. The Hitachi Rail Italy Driverless Metro (formerly AnsaldoBreda) is a fully autonomous EMU family used across the globe. This specific model is based on those used by Copenhagen's Metro since 2002.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Hitachi",
-            "tag": ["Automated Metro"],
-            "stats": {
-                "maxSpeed": 25.0,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.3,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 102.0,
-                "carLength": 13.0,
-                "minCars": 3.0,
-                "maxCars": 6.0,
-                "carsPerCarSet": 3.0,
-                "carCost": 2500000,
-                "trainWidth": 2.65,
-                "minStationLength": 80,
-                "maxStationLength": 160,
-                "baseTrackCost": 30000,
-                "baseStationCost": 50000000,
-                "trainOperationalCostPerHour": 100,
-                "carOperationalCostPerHour": 10,
-                "scissorsCrossoverCost": 12000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["AnsaldoBreda (CPH)"],
-            "appearance": {
-                "color": "#9E0817"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "Europe",
-                "country": "Denmark",
-                "city": "Copenhagen"
-            }
-        },
-        "Innovia Metro (VAN)": {
-            "id": "Innovia Metro (VAN)",
-            "name": "Innovia Metro (VAN)",
-            "description": "Lighter, more flexible transit for moderate capacity routes. The Innovia Metro is an automated rapid transit system family built by Alstom that have been in service across North America since 1985. This specific model is based on the Mark V used in Vancouver since 2025. Acceleration and decceleration are guesstimates.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Alstom",
-            "tag": ["Automated Metro"],
-            "stats": {
-                "maxSpeed": 22.2,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.0,
-                "maxDeceleration": 1.0,
-                "capacityPerCar": 134.0,
-                "carLength": 16.96,
-                "minCars": 4.0,
-                "maxCars": 5.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2500000,
-                "trainWidth": 2.65,
-                "minStationLength": 100,
-                "maxStationLength": 130,
-                "baseTrackCost": 30000,
-                "baseStationCost": 50000000,
-                "trainOperationalCostPerHour": 100,
-                "carOperationalCostPerHour": 10,
-                "scissorsCrossoverCost": 12000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Innovia Metro (VAN)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Canada",
-                "city": "Vancouver"
-            }
-        },
-        "VAL 208 (FRA)": {
-            "id": "VAL 208 (FRA)",
-            "name": "VAL 208 (FRA)",
-            "description": "These are light metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The VAL 208 is an autonomous, rubber-tire EMU made by Siemens primarily used in France (Lille, Renne, Toulouse) and has been in service since 2001.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Siemens",
-            "tag": ["Automated Metro"],
-            "stats": {
-                "maxSpeed": 22.2,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.3,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 100.0,
-                "carLength": 13.07,
-                "minCars": 2.0,
-                "maxCars": 4.0,
-                "carsPerCarSet": 2.0,
-                "carCost": 2000000,
-                "trainWidth": 2.4,
-                "minStationLength": 60,
-                "maxStationLength": 100,
-                "baseTrackCost": 30000,
-                "baseStationCost": 50000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 12000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["VAL 208 (FRA)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "Europe",
-                "country": "France",
-                "city": "Lille"
-            }
-        },
-        "NM-16 (MXC)": {
-            "id": "NM-16 (MXC)",
-            "name": "NM-16 (MXC)",
-            "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The NM-16 is a rubber-tyred model of electrical multiple units used on the Mexico City Metro",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "CAF",
-            "tag": ["Automated Metro"],
-            "stats": {
-                "maxSpeed": 19.4,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.43,
-                "maxDeceleration": 1.43,
-                "capacityPerCar": 249.0,
-                "carLength": 16.77,
-                "minCars": 9.0,
-                "maxCars": 9.0,
-                "carsPerCarSet": 9.0,
-                "carCost": 2134515,
-                "trainWidth": 3.0,
-                "minStationLength": 200,
-                "maxStationLength": 200,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 600,
-                "carOperationalCostPerHour": 60,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["NM-16 (MXC)"],
-            "appearance": {
-                "color": "#F04E98"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Mexico",
-                "city": "Mexico City"
-            }
-        },
-        "Azur (MTL)": {
-            "id": "Azur (MTL)",
-            "name": "Azur (MTL)",
-            "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The MPM-10 (Azur) is a rubber-tire vehicle built by Bombardier and Alstom for the Montreal Metro that entered service in 2016.",
-            "allowAtGradeRoadCrossing": false,
-            "manufacturer": ["Bombardier","Alstom"],
-            "tag": ["Automated Metro"],
-            "stats": {
-                "maxSpeed": 20.1,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.21,
-                "maxDeceleration": 1.23,
-                "capacityPerCar": 126.0,
-                "carLength": 16.93,
-                "minCars": 9.0,
-                "maxCars": 9.0,
-                "carsPerCarSet": 9.0,
-                "carCost": 1848654,
-                "trainWidth": 2.5,
-                "minStationLength": 190,
-                "maxStationLength": 190,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 600,
-                "carOperationalCostPerHour": 60,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Azur (MTL)"],
-            "appearance": {
-                "color": "#0085CA"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Canada",
-                "city": "Montreal"
-            }
-        },
+        // "AnsaldoBreda (CPH)": {
+        //     "id": "AnsaldoBreda (CPH)",
+        //     "name": "AnsaldoBreda (CPH)",
+        //     "description": "Lighter, more flexible transit for moderate capacity routes. The Hitachi Rail Italy Driverless Metro (formerly AnsaldoBreda) is a fully autonomous EMU family used across the globe. This specific model is based on those used by Copenhagen's Metro since 2002.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Hitachi",
+        //     "tag": ["Automated Metro"],
+        //     "stats": {
+        //         "maxSpeed": 25.0,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.3,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 102.0,
+        //         "carLength": 13.0,
+        //         "minCars": 3.0,
+        //         "maxCars": 6.0,
+        //         "carsPerCarSet": 3.0,
+        //         "carCost": 2500000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 80,
+        //         "maxStationLength": 160,
+        //         "baseTrackCost": 30000,
+        //         "baseStationCost": 50000000,
+        //         "trainOperationalCostPerHour": 100,
+        //         "carOperationalCostPerHour": 10,
+        //         "scissorsCrossoverCost": 12000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["AnsaldoBreda (CPH)"],
+        //     "appearance": {
+        //         "color": "#9E0817"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "Europe",
+        //         "country": "Denmark",
+        //         "city": "Copenhagen"
+        //     }
+        // },
+        // "Innovia Metro (VAN)": {
+        //     "id": "Innovia Metro (VAN)",
+        //     "name": "Innovia Metro (VAN)",
+        //     "description": "Lighter, more flexible transit for moderate capacity routes. The Innovia Metro is an automated rapid transit system family built by Alstom that have been in service across North America since 1985. This specific model is based on the Mark V used in Vancouver since 2025. Acceleration and decceleration are guesstimates.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Alstom",
+        //     "tag": ["Automated Metro"],
+        //     "stats": {
+        //         "maxSpeed": 22.2,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.0,
+        //         "maxDeceleration": 1.0,
+        //         "capacityPerCar": 134.0,
+        //         "carLength": 16.96,
+        //         "minCars": 4.0,
+        //         "maxCars": 5.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2500000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 100,
+        //         "maxStationLength": 130,
+        //         "baseTrackCost": 30000,
+        //         "baseStationCost": 50000000,
+        //         "trainOperationalCostPerHour": 100,
+        //         "carOperationalCostPerHour": 10,
+        //         "scissorsCrossoverCost": 12000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Innovia Metro (VAN)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "Canada",
+        //         "city": "Vancouver"
+        //     }
+        // },
+        // "VAL 208 (FRA)": {
+        //     "id": "VAL 208 (FRA)",
+        //     "name": "VAL 208 (FRA)",
+        //     "description": "These are light metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The VAL 208 is an autonomous, rubber-tire EMU made by Siemens primarily used in France (Lille, Renne, Toulouse) and has been in service since 2001.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Automated Metro"],
+        //     "stats": {
+        //         "maxSpeed": 22.2,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.3,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 100.0,
+        //         "carLength": 13.07,
+        //         "minCars": 2.0,
+        //         "maxCars": 4.0,
+        //         "carsPerCarSet": 2.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 2.4,
+        //         "minStationLength": 60,
+        //         "maxStationLength": 100,
+        //         "baseTrackCost": 30000,
+        //         "baseStationCost": 50000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 12000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["VAL 208 (FRA)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "Europe",
+        //         "country": "France",
+        //         "city": "Lille"
+        //     }
+        // },
+        // "NM-16 (MXC)": {
+        //     "id": "NM-16 (MXC)",
+        //     "name": "NM-16 (MXC)",
+        //     "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The NM-16 is a rubber-tyred model of electrical multiple units used on the Mexico City Metro",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "CAF",
+        //     "tag": ["Automated Metro"],
+        //     "stats": {
+        //         "maxSpeed": 19.4,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.43,
+        //         "maxDeceleration": 1.43,
+        //         "capacityPerCar": 249.0,
+        //         "carLength": 16.77,
+        //         "minCars": 9.0,
+        //         "maxCars": 9.0,
+        //         "carsPerCarSet": 9.0,
+        //         "carCost": 2134515,
+        //         "trainWidth": 3.0,
+        //         "minStationLength": 200,
+        //         "maxStationLength": 200,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 600,
+        //         "carOperationalCostPerHour": 60,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["NM-16 (MXC)"],
+        //     "appearance": {
+        //         "color": "#F04E98"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "Mexico",
+        //         "city": "Mexico City"
+        //     }
+        // },
+        // "Azur (MTL)": {
+        //     "id": "Azur (MTL)",
+        //     "name": "Azur (MTL)",
+        //     "description": "These are heavy metro systems which use rubber wheels instead of steel. Operational costs are higher, but so is acceleration. The MPM-10 (Azur) is a rubber-tire vehicle built by Bombardier and Alstom for the Montreal Metro that entered service in 2016.",
+        //     "allowAtGradeRoadCrossing": false,
+        //     "manufacturer": ["Bombardier","Alstom"],
+        //     "tag": ["Automated Metro"],
+        //     "stats": {
+        //         "maxSpeed": 20.1,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.21,
+        //         "maxDeceleration": 1.23,
+        //         "capacityPerCar": 126.0,
+        //         "carLength": 16.93,
+        //         "minCars": 9.0,
+        //         "maxCars": 9.0,
+        //         "carsPerCarSet": 9.0,
+        //         "carCost": 1848654,
+        //         "trainWidth": 2.5,
+        //         "minStationLength": 190,
+        //         "maxStationLength": 190,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 600,
+        //         "carOperationalCostPerHour": 60,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Azur (MTL)"],
+        //     "appearance": {
+        //         "color": "#0085CA"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "Canada",
+        //         "city": "Montreal"
+        //     }
+        // },
 
-        // Standard LRT Types
-        "S700 (MSP)": {
-            "id": "S700 (MSP)",
-            "name": "S700 (MSP)",
-            "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S700 series are articulated low-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on those recieved in 2020 by Metro Transit in Minnesota.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Siemens",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 24.4,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 1.34,
-                "maxDeceleration": 1.34,
-                "capacityPerCar": 175.0,
-                "carLength": 28.74,
-                "minCars": 1.0,
-                "maxCars": 3.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2185000,
-                "trainWidth": 2.65,
-                "minStationLength": 89,
-                "maxStationLength": 120,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["S700 (MSP)"],
-            "appearance": {
-                "color": "#008244"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "Minneapolis"
-            }
-        },
-        "Avenio (CPH)": {
-            "id": "Avenio (CPH)",
-            "name": "Avenio (CPH)",
-            "description": "City tram service modeled after Siemens Avenio.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Siemens",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxAcceleration": 1.2,
-                "maxDeceleration": 1.2,
-                "maxSpeed": 22.22,
-                "maxSpeedLocalStation": 8.0,
-                "capacityPerCar": 200,
-                "carLength": 30,
-                "minCars": 1,
-                "maxCars": 2,
-                "carsPerCarSet": 1,
-                "carCost": 1500000,
-                "trainWidth": 2.65,
-                "minStationLength": 62,
-                "maxStationLength": 80,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Avenio (CPH)"],
-            "appearance": { color: "#62b54e" },
-            "isFixed": false,
-            location: {
-                "continent": "Europe",
-                "country": "Denmark",
-                "city": "Copenhagen"
-            }
-        },
-        "S70 (ATL)": {
-            "id": "S70 (ATL)",
-            "name": "S70 (ATL)",
-            "description": "City tram service. The S700 Streetcar is an articulated low-floor streetcar built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on the streetcar model ordered by OC Streetcar.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Siemens",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 20.0,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 1.34,
-                "maxDeceleration": 1.34,
-                "capacityPerCar": 200.0,
-                "carLength": 27.5,
-                "minCars": 1.0,
-                "maxCars": 1.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2185000,
-                "trainWidth": 2.65,
-                "minStationLength": 62,
-                "maxStationLength": 80,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["S70 (ATL)"],
-            "appearance": {
-                "color": "#01235E"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "Atlanta"
-            }
-        },
-        "P3010 LRV (LA)": {
-            "id": "P3010 LRV (LA)",
-            "name": "P3010 LRV (LA)",
-            "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The P3010 is an articulated low-floor light-rail vehicle built by Kinki Sharyo that has been in service in LA since 2016.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Kinki-Sharyo",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 28.9,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 1.34,
-                "maxDeceleration": 1.56,
-                "capacityPerCar": 175.0,
-                "carLength": 27.13,
-                "minCars": 2.0,
-                "maxCars": 3.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2500000,
-                "trainWidth": 2.65,
-                "minStationLength": 84,
-                "maxStationLength": 120,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["P3010 LRV (LA)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "Los Angeles"
-            }
-        },
-        "S700-US (SD)": {
-            "id": "S700-US (SD)",
-            "name": "S700-US (SD)",
-            "description": "City tram service. The S700 series are articulated low-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on the ultra-short model used in San Diego since 2024.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Siemens",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 24.6,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 1.34,
-                "maxDeceleration": 1.34,
-                "capacityPerCar": 145.0,
-                "carLength": 24.8,
-                "minCars": 2.0,
-                "maxCars": 4.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2185000,
-                "trainWidth": 2.65,
-                "minStationLength": 102,
-                "maxStationLength": 140,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["S700-US (SD)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "San Diego"
-            }
-        },
-        "S200-HF (CGY)": {
-            "id": "S200-HF (CGY)",
-            "name": "S200-HF (CGY)",
-            "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S200 series are articulated high-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2016. This specific model is based on the model used in Calgary since 2019.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Siemens",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 22.4,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 0.95,
-                "maxDeceleration": 1.32,
-                "capacityPerCar": 200.0,
-                "carLength": 25.8,
-                "minCars": 1.0,
-                "maxCars": 3.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2185000,
-                "trainWidth": 2.65,
-                "minStationLength": 80,
-                "maxStationLength": 120,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["S200-HF (CGY)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "Canada",
-                "city": "Calgary"
-            }
-        },
-        "S200-HF (SF)": {
-            "id": "S200-HF (SF)",
-            "name": "S200-HF (SF)",
-            "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S200 series are articulated high-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2016. This specific model is based on the model used in San Francisco since 2017.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Siemens",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 22.4,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 1.34,
-                "maxDeceleration": 1.34,
-                "capacityPerCar": 150.0,
-                "carLength": 22.86,
-                "minCars": 2.0,
-                "maxCars": 3.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2185000,
-                "trainWidth": 2.65,
-                "minStationLength": 71,
-                "maxStationLength": 120,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["S200-HF (SF)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "San Francisco"
-            }
-        },
-        "NJT Electric LRV": {
-            "id": "NJT Electric LRV",
-            "name": "NJT Electric LRV",
-            "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. This is an unnamed articulated low-floor light-rail vehicle built by Kinki-Sharyo for New Jersey Transit, specifically Hudson-Bergen Light Rail and Newark Light Rail. It has been in service since 2000.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Kinki-Sharyo",
-            "tag": ["Standard LRT"],
-            "stats": {
-                "maxSpeed": 24.4,
-                "maxSpeedLocalStation": 6.7,
-                "maxAcceleration": 1.34,
-                "maxDeceleration": 1.34,
-                "capacityPerCar": 200.0,
-                "carLength": 27.43,
-                "minCars": 1.0,
-                "maxCars": 1.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2000000,
-                "trainWidth": 2.65,
-                "minStationLength": 62,
-                "maxStationLength": 80,
-                "baseTrackCost": 25000,
-                "baseStationCost": 20000000,
-                "trainOperationalCostPerHour": 200,
-                "carOperationalCostPerHour": 20,
-                "scissorsCrossoverCost": 5000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["NJT Electric LRV"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New Jersey"
-            }
-        },
+        // // Standard LRT Types
+        // "S700 (MSP)": {
+        //     "id": "S700 (MSP)",
+        //     "name": "S700 (MSP)",
+        //     "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S700 series are articulated low-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on those recieved in 2020 by Metro Transit in Minnesota.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 24.4,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 1.34,
+        //         "maxDeceleration": 1.34,
+        //         "capacityPerCar": 175.0,
+        //         "carLength": 28.74,
+        //         "minCars": 1.0,
+        //         "maxCars": 3.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2185000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 89,
+        //         "maxStationLength": 120,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["S700 (MSP)"],
+        //     "appearance": {
+        //         "color": "#008244"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "Minneapolis"
+        //     }
+        // },
+        // "Avenio (CPH)": {
+        //     "id": "Avenio (CPH)",
+        //     "name": "Avenio (CPH)",
+        //     "description": "City tram service modeled after Siemens Avenio.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxAcceleration": 1.2,
+        //         "maxDeceleration": 1.2,
+        //         "maxSpeed": 22.22,
+        //         "maxSpeedLocalStation": 8.0,
+        //         "capacityPerCar": 200,
+        //         "carLength": 30,
+        //         "minCars": 1,
+        //         "maxCars": 2,
+        //         "carsPerCarSet": 1,
+        //         "carCost": 1500000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 62,
+        //         "maxStationLength": 80,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Avenio (CPH)"],
+        //     "appearance": { color: "#62b54e" },
+        //     "isFixed": false,
+        //     location: {
+        //         "continent": "Europe",
+        //         "country": "Denmark",
+        //         "city": "Copenhagen"
+        //     }
+        // },
+        // "S70 (ATL)": {
+        //     "id": "S70 (ATL)",
+        //     "name": "S70 (ATL)",
+        //     "description": "City tram service. The S700 Streetcar is an articulated low-floor streetcar built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on the streetcar model ordered by OC Streetcar.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 20.0,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 1.34,
+        //         "maxDeceleration": 1.34,
+        //         "capacityPerCar": 200.0,
+        //         "carLength": 27.5,
+        //         "minCars": 1.0,
+        //         "maxCars": 1.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2185000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 62,
+        //         "maxStationLength": 80,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["S70 (ATL)"],
+        //     "appearance": {
+        //         "color": "#01235E"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "Atlanta"
+        //     }
+        // },
+        // "P3010 LRV (LA)": {
+        //     "id": "P3010 LRV (LA)",
+        //     "name": "P3010 LRV (LA)",
+        //     "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The P3010 is an articulated low-floor light-rail vehicle built by Kinki Sharyo that has been in service in LA since 2016.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Kinki-Sharyo",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 28.9,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 1.34,
+        //         "maxDeceleration": 1.56,
+        //         "capacityPerCar": 175.0,
+        //         "carLength": 27.13,
+        //         "minCars": 2.0,
+        //         "maxCars": 3.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2500000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 84,
+        //         "maxStationLength": 120,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["P3010 LRV (LA)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "Los Angeles"
+        //     }
+        // },
+        // "S700-US (SD)": {
+        //     "id": "S700-US (SD)",
+        //     "name": "S700-US (SD)",
+        //     "description": "City tram service. The S700 series are articulated low-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2004. This specific model is based on the ultra-short model used in San Diego since 2024.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 24.6,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 1.34,
+        //         "maxDeceleration": 1.34,
+        //         "capacityPerCar": 145.0,
+        //         "carLength": 24.8,
+        //         "minCars": 2.0,
+        //         "maxCars": 4.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2185000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 102,
+        //         "maxStationLength": 140,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["S700-US (SD)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "San Diego"
+        //     }
+        // },
+        // "S200-HF (CGY)": {
+        //     "id": "S200-HF (CGY)",
+        //     "name": "S200-HF (CGY)",
+        //     "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S200 series are articulated high-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2016. This specific model is based on the model used in Calgary since 2019.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 22.4,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 0.95,
+        //         "maxDeceleration": 1.32,
+        //         "capacityPerCar": 200.0,
+        //         "carLength": 25.8,
+        //         "minCars": 1.0,
+        //         "maxCars": 3.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2185000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 80,
+        //         "maxStationLength": 120,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["S200-HF (CGY)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "Canada",
+        //         "city": "Calgary"
+        //     }
+        // },
+        // "S200-HF (SF)": {
+        //     "id": "S200-HF (SF)",
+        //     "name": "S200-HF (SF)",
+        //     "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. The S200 series are articulated high-floor light-rail vehicles built by Siemens Mobility that have been in service across North America since 2016. This specific model is based on the model used in San Francisco since 2017.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 22.4,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 1.34,
+        //         "maxDeceleration": 1.34,
+        //         "capacityPerCar": 150.0,
+        //         "carLength": 22.86,
+        //         "minCars": 2.0,
+        //         "maxCars": 3.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2185000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 71,
+        //         "maxStationLength": 120,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["S200-HF (SF)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "San Francisco"
+        //     }
+        // },
+        // "NJT Electric LRV": {
+        //     "id": "NJT Electric LRV",
+        //     "name": "NJT Electric LRV",
+        //     "description": "Light rail is a form of urban transit that uses rolling stock derived from tram technology while also having some features from heavy rapid transit. This is an unnamed articulated low-floor light-rail vehicle built by Kinki-Sharyo for New Jersey Transit, specifically Hudson-Bergen Light Rail and Newark Light Rail. It has been in service since 2000.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Kinki-Sharyo",
+        //     "tag": ["Standard LRT"],
+        //     "stats": {
+        //         "maxSpeed": 24.4,
+        //         "maxSpeedLocalStation": 6.7,
+        //         "maxAcceleration": 1.34,
+        //         "maxDeceleration": 1.34,
+        //         "capacityPerCar": 200.0,
+        //         "carLength": 27.43,
+        //         "minCars": 1.0,
+        //         "maxCars": 1.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 62,
+        //         "maxStationLength": 80,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 20000000,
+        //         "trainOperationalCostPerHour": 200,
+        //         "carOperationalCostPerHour": 20,
+        //         "scissorsCrossoverCost": 5000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["NJT Electric LRV"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "New Jersey"
+        //     }
+        // },
 
-        // Diesel LRT Types
-        "GTW 2/6 (NJT)": {
-            "id": "GTW 2/6 (NJT)",
-            "name": "GTW 2/6 (NJT)",
-            "description": "The diesel light metro is a rare form of transit that is generally used when existing rail can be used but there is no electrification, and heavy rail is not justified. This is a variant of the Stadler GTW 2/6 which is one of the rare and bizarre light rail DMUs and is exclusively in service on NJT's River Line. Details are scarce so the acceleration and braking are guesstimates.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Stadler",
-            "tag": ["Diesel LRT"],
-            "stats": {
-                "maxSpeed": 30.6,
-                "maxSpeedLocalStation": 10,
-                "maxAcceleration": 1.3,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 200.0,
-                "carLength": 31.2,
-                "minCars": 1.0,
-                "maxCars": 2.0,
-                "carsPerCarSet": 1.0,
-                "carCost": 2000000,
-                "trainWidth": 2.65,
-                "minStationLength": 65,
-                "maxStationLength": 100,
-                "baseTrackCost": 25000,
-                "baseStationCost": 40000000,
-                "trainOperationalCostPerHour": 300,
-                "carOperationalCostPerHour": 30,
-                "scissorsCrossoverCost": 10000000
-            },
-            "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["GTW 2/6 (NJT)"],
-            "appearance": {
-                "color": "#000000"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New Jersey"
-            }
-        },
+        // // Diesel LRT Types
+        // "GTW 2/6 (NJT)": {
+        //     "id": "GTW 2/6 (NJT)",
+        //     "name": "GTW 2/6 (NJT)",
+        //     "description": "The diesel light metro is a rare form of transit that is generally used when existing rail can be used but there is no electrification, and heavy rail is not justified. This is a variant of the Stadler GTW 2/6 which is one of the rare and bizarre light rail DMUs and is exclusively in service on NJT's River Line. Details are scarce so the acceleration and braking are guesstimates.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Stadler",
+        //     "tag": ["Diesel LRT"],
+        //     "stats": {
+        //         "maxSpeed": 30.6,
+        //         "maxSpeedLocalStation": 10,
+        //         "maxAcceleration": 1.3,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 200.0,
+        //         "carLength": 31.2,
+        //         "minCars": 1.0,
+        //         "maxCars": 2.0,
+        //         "carsPerCarSet": 1.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 2.65,
+        //         "minStationLength": 65,
+        //         "maxStationLength": 100,
+        //         "baseTrackCost": 25000,
+        //         "baseStationCost": 40000000,
+        //         "trainOperationalCostPerHour": 300,
+        //         "carOperationalCostPerHour": 30,
+        //         "scissorsCrossoverCost": 10000000
+        //     },
+        //     "elevationMultipliers": TRAM_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["GTW 2/6 (NJT)"],
+        //     "appearance": {
+        //         "color": "#000000"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "New Jersey"
+        //     }
+        // },
 
         // Standard Commuter Types
         "M9 (LIRR)": {
@@ -1027,7 +1041,7 @@
             "description": "Regional rail is a public rail transport service that operates between towns and cities. In North America, regional rail is often a synonym for commuter rail. The M9 is a commuter rail EMU built by Kawasaki for the Long Island Railroad that entered service in 2009.",
             "allowAtGradeRoadCrossing": true,
 			"manufacturer": "Kawasaki",
-            "tag": ["Standard Commuter"],
+            "tag": ["Commuter"],
             "stats": {
                 "maxSpeed": 40.0,
                 "maxSpeedLocalStation": 12,
@@ -1046,7 +1060,14 @@
                 "baseStationCost": 65000000,
                 "trainOperationalCostPerHour": 300,
                 "carOperationalCostPerHour": 30,
-                "scissorsCrossoverCost": 10500000
+                "scissorsCrossoverCost": 10500000,
+				"stopTimeSeconds": 90,
+				"parallelTrackSpacing": 2.72,
+				"trackClearance": 1.31,
+				"maxLateralAcceleration": 0.8,
+				"minTurnRadius": 155,
+				"minStationTurnRadius": 3361,
+				"maxSlopePercentage": 2.0,
             },
             "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
             "compatibleTrackTypes": ["M9 (LIRR)"],
@@ -1059,241 +1080,242 @@
                 "country": "US",
                 "city": "New York City"
             }
-        },
-        "IR4 (CPH)": {
-            "id": "IR4 (CPH)",
-            "name": "IR4 (CPH)",
-            "description": "Fast long-distance fully electric train modeled after the Danish IR4. Also known as Litra ER. Built by ABB Scandia in the city of Randers in the years from 1993-1997",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "ABB Scandia",
-            "tag": ["Standard Commuter"],
-            "stats": {
-                "maxAcceleration": 0.8,
-                "maxDeceleration": 1.0,
-                "maxSpeed": 50.0,
-                "maxSpeedLocalStation": 15,
-                "capacityPerCar": 130,
-                "carLength": 26,
-                "minCars": 2,
-                "maxCars": 8,
-                "carsPerCarSet": 2,
-                "carCost": 4000000,
-                "trainWidth": 3.1,
-                "minStationLength": 210,
-                "maxStationLength": 275,
-                "baseTrackCost": 60000,
-                "baseStationCost": 90000000,
-                "trainOperationalCostPerHour": 700,
-                "carOperationalCostPerHour": 70,
-                "scissorsCrossoverCost": 20000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["IR4 (CPH)"],
-            "appearance": { color: "#222222" },
-            "isFixed": false,
-            location: {
-                "continent": "Europe",
-                "country": "Denmark",
-                "city": "Copenhagen"
-            }
-        },
-
-        // Diesel Commuter Types
-        "DM30-C3 (LIRR)": {
-            "id": "DM30-C3 (LIRR)",
-            "name": "DM30-C3 (LIRR)",
-            "description": "Regional rail is a public rail transport service that operates between towns and cities. In North America, regional rail is often a synonym for commuter rail. The DM30AC-C3 is a commuter rail Diesel train that entered service in 1993, with coach cars manufacured by Kawasaki powered by an EMD manufactured Diesel locomotive.",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Kawasaki",
-            "tag": ["Diesel Commuter"],
-            "stats": {
-                "maxSpeed": 42.0,
-                "maxSpeedLocalStation": 12,
-                "maxAcceleration": 0.65,
-                "maxDeceleration": 1.3,
-                "capacityPerCar": 150.0,
-                "carLength": 26.0,
-                "minCars": 4.0,
-                "maxCars": 12.0,
-                "carsPerCarSet": 2.0,
-                "carCost": 2500000,
-                "trainWidth": 3.1,
-                "minStationLength": 314,
-                "maxStationLength": 400,
-                "baseTrackCost": 40000,
-                "baseStationCost": 60000000,
-                "trainOperationalCostPerHour": 800,
-                "carOperationalCostPerHour": 40,
-                "scissorsCrossoverCost": 10000000
-            },
-            "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["DM30-C3 (LIRR)"],
-            "appearance": {
-                "color": "#03B8A9"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "North America",
-                "country": "US",
-                "city": "New York City"
-            }
-        },
-        "LINT 41": {
-            "id": "LINT 41",
-            "name": "LINT 41",
-            "description": "Regional diesel/electric unit for local services. Modelled after the LINT 41",
-            "allowAtGradeRoadCrossing": true,
-			"manufacturer": "Alstom",
-            "tag": ["Diesel Commuter"],
-            "stats": {
-                "maxAcceleration": 0.6,
-                "maxDeceleration": 0.9,
-                "maxSpeed": 33.3,
-                "maxSpeedLocalStation": 12,
-                "capacityPerCar": 100,
-                "carLength": 20,
-                "minCars": 2,
-                "maxCars": 4,
-                "carsPerCarSet": 2,
-                "carCost": 2000000,
-                "trainWidth": 2.75,
-                "minStationLength": 82,
-                "maxStationLength": 120,
-                "baseTrackCost": 40000,
-                "baseStationCost": 60000000,
-                "trainOperationalCostPerHour": 300,
-                "carOperationalCostPerHour": 30,
-                "scissorsCrossoverCost": 10000000
-            },
-            "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["LINT 41"],
-            "appearance": { color: "#ebd768" },
-            "isFixed": false,
-            location: {
-                "continent": ["Europe","North America"],
-                "country": ["Denmark","Germany","Canada"],
-                "city": ["Copenhagen","Mainz","Frankfurt am Main","Ottawa"]
-            }
-        },
-
-        // Standard S-Bahn Types
-        "Litra SA (CPH)": {
-            "id": "Litra SA (CPH)",
-            "name": "Litra SA (CPH)",
-            "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The Litra SA is an EMU produced by Alstom and Siemens for the Copenhagen S-Tog system which entered service in 1996.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": ["Siemens","Alstom"],
-            "tag": ["Standard S-Bahn"],
-            "stats": {
-                "maxSpeed": 33.3,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.3,
-                "maxDeceleration": 1.2,
-                "capacityPerCar": 87.0,
-                "carLength": 10.5,
-                "minCars": 4.0,
-                "maxCars": 8.0,
-                "carsPerCarSet": 4.0,
-                "carCost": 2500000,
-                "trainWidth": 3.2,
-                "minStationLength": 100,
-                "maxStationLength": 220,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 25,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Litra SA (CPH)"],
-            "appearance": {
-                "color": "#BD2D3D"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "Europe",
-                "country": "Denmark",
-                "city": "Copenhagen"
-            }
-        },
-        "Desiro CJ (VIE)": {
-            "id": "Desiro CJ (VIE)",
-            "name": "Desiro CJ (VIE)",
-            "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The Siemens Desiro is a family of DMUs and EMUs in service across the world made by Siemens and formerly Ural Locomotives. This specific model is based on Mainline model 'Urban' Varient in service since 2012 on Vienna's S-Bahn.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": "Siemens",
-            "tag": ["Standard S-Bahn"],
-            "stats": {
-                "maxSpeed": 44.4,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.1,
-                "maxDeceleration": 0.8,
-                "capacityPerCar": 180.0,
-                "carLength": 25.0,
-                "minCars": 3.0,
-                "maxCars": 6.0,
-                "carsPerCarSet": 3.0,
-                "carCost": 2000000,
-                "trainWidth": 3.2,
-                "minStationLength": 152,
-                "maxStationLength": 200,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["Desiro CJ (VIE)"],
-            "appearance": {
-                "color": "#0097D9"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "Europe",
-                "country": "Austria",
-                "city": "Vienna"
-            }
-        },
-        "DBAG 483 (BER)": {
-            "id": "DBAG 483 (BER)",
-            "name": "DBAG 483 (BER)",
-            "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The DB Class 483 is an EMU built by Stadler and Siemens for the Berlin S-Bahn that entered service in 2021.",
-            "allowAtGradeRoadCrossing": false,
-			"manufacturer": ["Siemens","Stadler"],
-            "tag": ["Standard S-Bahn"],
-            "stats": {
-                "maxSpeed": 27.8,
-                "maxSpeedLocalStation": 13,
-                "maxAcceleration": 1.0,
-                "maxDeceleration": 0.8,
-                "capacityPerCar": 87.0,
-                "carLength": 18.4,
-                "minCars": 2.0,
-                "maxCars": 8.0,
-                "carsPerCarSet": 2.0,
-                "carCost": 2000000,
-                "trainWidth": 3.0,
-                "minStationLength": 150,
-                "maxStationLength": 200,
-                "baseTrackCost": 50000,
-                "baseStationCost": 75000000,
-                "trainOperationalCostPerHour": 500,
-                "carOperationalCostPerHour": 50,
-                "scissorsCrossoverCost": 15000000
-            },
-            "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
-            "compatibleTrackTypes": ["DBAG 483 (BER)"],
-            "appearance": {
-                "color": "#CE9D52"
-            },
-            "isFixed": false,
-            "location": {
-                "continent": "Europe",
-                "country": "Germany",
-                "city": "Berlin"
-            }
         }
+        // },
+        // "IR4 (CPH)": {
+        //     "id": "IR4 (CPH)",
+        //     "name": "IR4 (CPH)",
+        //     "description": "Fast long-distance fully electric train modeled after the Danish IR4. Also known as Litra ER. Built by ABB Scandia in the city of Randers in the years from 1993-1997",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "ABB Scandia",
+        //     "tag": ["Standard Commuter"],
+        //     "stats": {
+        //         "maxAcceleration": 0.8,
+        //         "maxDeceleration": 1.0,
+        //         "maxSpeed": 50.0,
+        //         "maxSpeedLocalStation": 15,
+        //         "capacityPerCar": 130,
+        //         "carLength": 26,
+        //         "minCars": 2,
+        //         "maxCars": 8,
+        //         "carsPerCarSet": 2,
+        //         "carCost": 4000000,
+        //         "trainWidth": 3.1,
+        //         "minStationLength": 210,
+        //         "maxStationLength": 275,
+        //         "baseTrackCost": 60000,
+        //         "baseStationCost": 90000000,
+        //         "trainOperationalCostPerHour": 700,
+        //         "carOperationalCostPerHour": 70,
+        //         "scissorsCrossoverCost": 20000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["IR4 (CPH)"],
+        //     "appearance": { color: "#222222" },
+        //     "isFixed": false,
+        //     location: {
+        //         "continent": "Europe",
+        //         "country": "Denmark",
+        //         "city": "Copenhagen"
+        //     }
+        // },
+
+        // // Diesel Commuter Types
+        // "DM30-C3 (LIRR)": {
+        //     "id": "DM30-C3 (LIRR)",
+        //     "name": "DM30-C3 (LIRR)",
+        //     "description": "Regional rail is a public rail transport service that operates between towns and cities. In North America, regional rail is often a synonym for commuter rail. The DM30AC-C3 is a commuter rail Diesel train that entered service in 1993, with coach cars manufacured by Kawasaki powered by an EMD manufactured Diesel locomotive.",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Kawasaki",
+        //     "tag": ["Diesel Commuter"],
+        //     "stats": {
+        //         "maxSpeed": 42.0,
+        //         "maxSpeedLocalStation": 12,
+        //         "maxAcceleration": 0.65,
+        //         "maxDeceleration": 1.3,
+        //         "capacityPerCar": 150.0,
+        //         "carLength": 26.0,
+        //         "minCars": 4.0,
+        //         "maxCars": 12.0,
+        //         "carsPerCarSet": 2.0,
+        //         "carCost": 2500000,
+        //         "trainWidth": 3.1,
+        //         "minStationLength": 314,
+        //         "maxStationLength": 400,
+        //         "baseTrackCost": 40000,
+        //         "baseStationCost": 60000000,
+        //         "trainOperationalCostPerHour": 800,
+        //         "carOperationalCostPerHour": 40,
+        //         "scissorsCrossoverCost": 10000000
+        //     },
+        //     "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["DM30-C3 (LIRR)"],
+        //     "appearance": {
+        //         "color": "#03B8A9"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "North America",
+        //         "country": "US",
+        //         "city": "New York City"
+        //     }
+        // },
+        // "LINT 41": {
+        //     "id": "LINT 41",
+        //     "name": "LINT 41",
+        //     "description": "Regional diesel/electric unit for local services. Modelled after the LINT 41",
+        //     "allowAtGradeRoadCrossing": true,
+		// 	"manufacturer": "Alstom",
+        //     "tag": ["Diesel Commuter"],
+        //     "stats": {
+        //         "maxAcceleration": 0.6,
+        //         "maxDeceleration": 0.9,
+        //         "maxSpeed": 33.3,
+        //         "maxSpeedLocalStation": 12,
+        //         "capacityPerCar": 100,
+        //         "carLength": 20,
+        //         "minCars": 2,
+        //         "maxCars": 4,
+        //         "carsPerCarSet": 2,
+        //         "carCost": 2000000,
+        //         "trainWidth": 2.75,
+        //         "minStationLength": 82,
+        //         "maxStationLength": 120,
+        //         "baseTrackCost": 40000,
+        //         "baseStationCost": 60000000,
+        //         "trainOperationalCostPerHour": 300,
+        //         "carOperationalCostPerHour": 30,
+        //         "scissorsCrossoverCost": 10000000
+        //     },
+        //     "elevationMultipliers": REGIONAL_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["LINT 41"],
+        //     "appearance": { color: "#ebd768" },
+        //     "isFixed": false,
+        //     location: {
+        //         "continent": ["Europe","North America"],
+        //         "country": ["Denmark","Germany","Canada"],
+        //         "city": ["Copenhagen","Mainz","Frankfurt am Main","Ottawa"]
+        //     }
+        // },
+
+        // // Standard S-Bahn Types
+        // "Litra SA (CPH)": {
+        //     "id": "Litra SA (CPH)",
+        //     "name": "Litra SA (CPH)",
+        //     "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The Litra SA is an EMU produced by Alstom and Siemens for the Copenhagen S-Tog system which entered service in 1996.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": ["Siemens","Alstom"],
+        //     "tag": ["Standard S-Bahn"],
+        //     "stats": {
+        //         "maxSpeed": 33.3,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.3,
+        //         "maxDeceleration": 1.2,
+        //         "capacityPerCar": 87.0,
+        //         "carLength": 10.5,
+        //         "minCars": 4.0,
+        //         "maxCars": 8.0,
+        //         "carsPerCarSet": 4.0,
+        //         "carCost": 2500000,
+        //         "trainWidth": 3.2,
+        //         "minStationLength": 100,
+        //         "maxStationLength": 220,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 25,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Litra SA (CPH)"],
+        //     "appearance": {
+        //         "color": "#BD2D3D"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "Europe",
+        //         "country": "Denmark",
+        //         "city": "Copenhagen"
+        //     }
+        // },
+        // "Desiro CJ (VIE)": {
+        //     "id": "Desiro CJ (VIE)",
+        //     "name": "Desiro CJ (VIE)",
+        //     "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The Siemens Desiro is a family of DMUs and EMUs in service across the world made by Siemens and formerly Ural Locomotives. This specific model is based on Mainline model 'Urban' Varient in service since 2012 on Vienna's S-Bahn.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": "Siemens",
+        //     "tag": ["Standard S-Bahn"],
+        //     "stats": {
+        //         "maxSpeed": 44.4,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.1,
+        //         "maxDeceleration": 0.8,
+        //         "capacityPerCar": 180.0,
+        //         "carLength": 25.0,
+        //         "minCars": 3.0,
+        //         "maxCars": 6.0,
+        //         "carsPerCarSet": 3.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 3.2,
+        //         "minStationLength": 152,
+        //         "maxStationLength": 200,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["Desiro CJ (VIE)"],
+        //     "appearance": {
+        //         "color": "#0097D9"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "Europe",
+        //         "country": "Austria",
+        //         "city": "Vienna"
+        //     }
+        // },
+        // "DBAG 483 (BER)": {
+        //     "id": "DBAG 483 (BER)",
+        //     "name": "DBAG 483 (BER)",
+        //     "description": "An S-Bahn is a type of hybrid commuter rail and rapid transit service that links suburbs with the city centre at moderate speeds, while continuing across the urban core over a central high-frequency corridor where multiple lines converge, where they provide a rapid means of travel across the city. The DB Class 483 is an EMU built by Stadler and Siemens for the Berlin S-Bahn that entered service in 2021.",
+        //     "allowAtGradeRoadCrossing": false,
+		// 	"manufacturer": ["Siemens","Stadler"],
+        //     "tag": ["Standard S-Bahn"],
+        //     "stats": {
+        //         "maxSpeed": 27.8,
+        //         "maxSpeedLocalStation": 13,
+        //         "maxAcceleration": 1.0,
+        //         "maxDeceleration": 0.8,
+        //         "capacityPerCar": 87.0,
+        //         "carLength": 18.4,
+        //         "minCars": 2.0,
+        //         "maxCars": 8.0,
+        //         "carsPerCarSet": 2.0,
+        //         "carCost": 2000000,
+        //         "trainWidth": 3.0,
+        //         "minStationLength": 150,
+        //         "maxStationLength": 200,
+        //         "baseTrackCost": 50000,
+        //         "baseStationCost": 75000000,
+        //         "trainOperationalCostPerHour": 500,
+        //         "carOperationalCostPerHour": 50,
+        //         "scissorsCrossoverCost": 15000000
+        //     },
+        //     "elevationMultipliers": BASE_ELEVATION_MULTIPLIERS,
+        //     "compatibleTrackTypes": ["DBAG 483 (BER)"],
+        //     "appearance": {
+        //         "color": "#CE9D52"
+        //     },
+        //     "isFixed": false,
+        //     "location": {
+        //         "continent": "Europe",
+        //         "country": "Germany",
+        //         "city": "Berlin"
+        //     }
+        // }
     };
 
 
@@ -1322,17 +1344,17 @@
                     !description.includes("commuter") &&
                     !description.includes("long-distance") &&
                     !description.includes("s-bahn")) {
-                    return "Standard LRT";
+                    return "LRT";
                 } else {
-                    return "Standard Commuter";
+                    return "Commuter";
                 }
             } else if (description.includes("regional") || 
                        description.includes("commuter") ||
                        description.includes("long-distance") ||
                        description.includes("s-bahn")) {
-                return "Standard Commuter";
+                return "Commuter";
             } else if (totalCapacityAtMaxCars >= 700) {
-                return "Standard Metro";
+                return "Metro";
             } else {
                 return "Automated Metro";
             }
@@ -1988,7 +2010,7 @@
             name: name,
             description: description || "Custom train type",
             allowAtGradeRoadCrossing: false,
-            tag: ["Standard Metro"],
+            tag: ["Metro"],
             stats: {
                 maxAcceleration: 1.0,
                 maxDeceleration: 1.0,
@@ -2007,7 +2029,14 @@
                 baseStationCost: 50000000,
                 trainOperationalCostPerHour: 300,
                 carOperationalCostPerHour: 30,
-                scissorsCrossoverCost: 10000000
+                scissorsCrossoverCost: 10000000,
+                stopTimeSeconds: 90,
+				parallelTrackSpacing: 3,
+				trackClearance: 1.3,
+				maxLateralAcceleration: 1,
+				minTurnRadius: 155,
+				minStationTurnRadius: 3000,
+				maxSlopePercentage: 2.0
             },
             elevationMultipliers: BASE_ELEVATION_MULTIPLIERS,
             compatibleTrackTypes: [trainId],
@@ -2875,14 +2904,20 @@
 				const buildInitialCategories = () => {
 					const categories = { 
                         "Fixed Standard Trains": true,
-                        "Standard Metro": true,
+                        "Metro": true,
                         "Automated Metro": true,
-                        "Standard LRT": true,
+                        "LRT": true,
                         "Diesel LRT": true,
-                        "Standard Commuter": true,
+                        "Commuter": true,
                         "Diesel Commuter": true,
-                        "Standard S-Bahn": true,
-                        "Automated S-Bahn": true
+                        "S-Bahn": true,
+                        "Automated S-Bahn": true,
+                        "Rubber Metro": true,
+                        "Automated Rubber Metro": true,
+                        "Rubber LRT": true,
+                        "People Mover": true,
+                        "Dual-Mode Commuter": true,
+                        "Hydrogen Commuter": true,
                     };
 					
 					return categories;
@@ -3007,14 +3042,21 @@
 				// Build categorized trains filtered by selected location
 				const categorizedTrains = {
 					"Fixed Standard Trains": [],
-					"Standard Metro": [],
+					"Metro": [],
 					"Automated Metro": [],
-					"Standard LRT": [],
+					"LRT": [],
 					"Diesel LRT": [],
-					"Standard Commuter": [],
+					"Commuter": [],
 					"Diesel Commuter": [],
-					"Standard S-Bahn": [],
-					"Automated S-Bahn": []
+					"S-Bahn": [],
+					"Automated S-Bahn": [],
+                    "Rubber Metro": [],
+                    "Automated Rubber Metro": [],
+                    "Rubber LRT": [],
+                    "People Mover": [],
+                    "Dual-Mode Commuter": [],
+                    "Hydrogen Commuter": [],
+
 				};
 				
 				// Collect all trains for quick access
@@ -3103,7 +3145,7 @@
 							allTrains[trainId] = train;
 							
 							// Categorize the train based on tag
-							let category = "Standard Metro";
+							let category = "Metro";
 							
 							if (train.isFixed) {
 								category = "Fixed Standard Trains";
@@ -3558,7 +3600,14 @@
 								createStatItem('Station Cost', `$${train.stats.baseStationCost.toLocaleString()}`),
 								createStatItem('Scissors Crossover', `$${train.stats.scissorsCrossoverCost.toLocaleString()}`),
 								createStatItem('Train Op. Cost/hr', `$${train.stats.trainOperationalCostPerHour}`),
-								createStatItem('Car Op. Cost/hr', `$${train.stats.carOperationalCostPerHour}`)
+								createStatItem('Car Op. Cost/hr', `$${train.stats.carOperationalCostPerHour}`),
+                                createStatItem('stopTimeSeconds', `$${train.stats.stopTimeSeconds}`),
+                                createStatItem('parallelTrackSpacing', `$${train.stats.parallelTrackSpacing}`),
+                                createStatItem('trackClearance', `$${train.stats.trackClearance}`),
+                                createStatItem('maxLateralAcceleration', `$${train.stats.maxLateralAcceleration}`),
+                                createStatItem('minTurnRadius', `$${train.stats.minTurnRadius}`),
+                                createStatItem('minStationTurnRadius', `$${train.stats.minStationTurnRadius}`),
+                                createStatItem('maxSlopePercentage', `$${train.stats.maxSlopePercentage}`)
 							])
 						]),
 						
@@ -3759,7 +3808,7 @@
 						),
 						renderCategorySection(
 							"Standard Metro",
-							categorizedTrains["Standard Metro"],
+							categorizedTrains["Metro"],
 							"Conventional metro systems with steel wheels"
 						),
 						renderCategorySection(
@@ -3767,9 +3816,19 @@
 							categorizedTrains["Automated Metro"],
 							"Driverless metro systems (GoA4)"
 						),
+                        renderCategorySection(
+							"Rubber Metro",
+							categorizedTrains["Rubber Metro"],
+							"Conventional metro systems with rubber tyres"
+						),
+                        renderCategorySection(
+							"Automated Rubber Metro",
+							categorizedTrains["Automated Rubber Metro"],
+							"Driverless rubber tyre metro systems (GoA4)"
+						),
 						renderCategorySection(
 							"Standard LRT",
-							categorizedTrains["Standard LRT"],
+							categorizedTrains["LRT"],
 							"Light rail and tram systems"
 						),
 						renderCategorySection(
@@ -3777,19 +3836,39 @@
 							categorizedTrains["Diesel LRT"],
 							"Diesel-powered light rail vehicles"
 						),
+                        renderCategorySection(
+							"Rubber LRT",
+							categorizedTrains["Rubber LRT"],
+							"Light rail and tram systems with rubber tyres"
+						),
 						renderCategorySection(
 							"Standard Commuter",
-							categorizedTrains["Standard Commuter"],
+							categorizedTrains["Commuter"],
 							"Electric commuter and regional rail"
 						),
 						renderCategorySection(
+							"People Mover",
+							categorizedTrains["People Mover"],
+							"Automated People Movers like in airports"
+						),
+                        renderCategorySection(
+							"Dual-Mode Commuter",
+							categorizedTrains["Dual-Mode Commuter"],
+							"Dual-Mode (Diesel and Electric) commuter trains"
+						),
+                        renderCategorySection(
+							"Hydrogen Commuter",
+							categorizedTrains["Hydrogen Commuter"],
+							"Hydrogen-powered commuter trains"
+						),
+                        renderCategorySection(
 							"Diesel Commuter",
 							categorizedTrains["Diesel Commuter"],
 							"Diesel-powered commuter trains"
 						),
 						renderCategorySection(
 							"Standard S-Bahn",
-							categorizedTrains["Standard S-Bahn"],
+							categorizedTrains["S-Bahn"],
 							"S-Bahn / hybrid commuter-rapid transit"
 						),
 						renderCategorySection(
@@ -4568,6 +4647,110 @@
                                             onChange: (e) => updateStat('carOperationalCostPerHour', parseInt(e.target.value)),
                                             className: 'w-full p-2 border border-input bg-background rounded text-sm'
                                         })
+                                    ]),
+                                    React.createElement('div', { key: 'stopTime' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Stop Time'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 10,
+                                            max: 100,
+                                            step: '1',
+                                            value: trainData.stats?.stopTimeSeconds || 30,
+                                            onChange: (e) => updateStat('stopTimeSeconds', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'parallelTrackSpacing' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Parallel Track Spacing'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 1,
+                                            max: 3,
+                                            step: '0.01',
+                                            value: trainData.stats?.parallelTrackSpacing || 2.75,
+                                            onChange: (e) => updateStat('parallelTrackSpacing', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'trackClearance' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Track Clearance'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 1,
+                                            max: 3,
+                                            step: '0.01',
+                                            value: trainData.stats?.trackClearance || 1.3,
+                                            onChange: (e) => updateStat('trackClearance', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'maxLateralAcceleration' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Max Lateral Acceleration'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 0.5,
+                                            max: 1.5,
+                                            step: '0.05',
+                                            value: trainData.stats?.maxLateralAcceleration || 1,
+                                            onChange: (e) => updateStat('maxLateralAcceleration', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'minTurnRadius' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Min Turn Radius'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 50,
+                                            max: 5000,
+                                            step: '10',
+                                            value: trainData.stats?.minTurnRadius || 200,
+                                            onChange: (e) => updateStat('minTurnRadius', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'minStationTurnRadius' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Min Station Turn Radius'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 100,
+                                            max: 10000,
+                                            step: '10',
+                                            value: trainData.stats?.minTurnRadius || 200,
+                                            onChange: (e) => updateStat('minStationTurnRadius', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'maxSlopePercentage' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Max Slope Percentage'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 1,
+                                            max: 15,
+                                            step: '0.1',
+                                            value: trainData.stats?.minTurnRadius || 6,
+                                            onChange: (e) => updateStat('maxSlopePercentage', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
                                     ])
                                 ])
                             ])
@@ -4670,7 +4853,14 @@
                         baseStationCost: 50000000,
                         trainOperationalCostPerHour: 300,
                         carOperationalCostPerHour: 30,
-                        scissorsCrossoverCost: 10000000
+                        scissorsCrossoverCost: 10000000,
+                        stopTimeSeconds: 90,
+                        parallelTrackSpacing: 2.72,
+                        trackClearance: 1.31,
+                        maxLateralAcceleration: 0.8,
+                        minTurnRadius: 155,
+                        minStationTurnRadius: 3361,
+                        maxSlopePercentage: 2.0,
                     },
                     elevationMultipliers: BASE_ELEVATION_MULTIPLIERS,
                     appearance: { color: '#7c3aed' }
@@ -5194,7 +5384,7 @@
                                             className: 'w-full p-2 border border-input bg-background rounded text-sm'
                                         })
                                     ]),
-                                    
+
                                     React.createElement('div', { key: 'scissors-cost' }, [
                                         React.createElement('label', {
                                             className: 'block text-sm font-medium mb-1'
@@ -5236,6 +5426,111 @@
                                             step: '5',
                                             value: trainData.stats?.carOperationalCostPerHour || 30,
                                             onChange: (e) => updateStat('carOperationalCostPerHour', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'stopTime' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Stop Time'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 10,
+                                            max: 100,
+                                            step: '1',
+                                            value: trainData.stats?.stopTimeSeconds || 30,
+                                            onChange: (e) => updateStat('stopTimeSeconds', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'parallelTrackSpacing' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Parallel Track Spacing'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 1,
+                                            max: 3,
+                                            step: '0.01',
+                                            value: trainData.stats?.parallelTrackSpacing || 2.75,
+                                            onChange: (e) => updateStat('parallelTrackSpacing', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'trackClearance' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Track Clearance'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 1,
+                                            max: 3,
+                                            step: '0.01',
+                                            value: trainData.stats?.trackClearance || 1.3,
+                                            onChange: (e) => updateStat('trackClearance', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'maxLateralAcceleration' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Max Lateral Acceleration'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 0.5,
+                                            max: 1.5,
+                                            step: '0.05',
+                                            value: trainData.stats?.maxLateralAcceleration || 1,
+                                            onChange: (e) => updateStat('maxLateralAcceleration', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'minTurnRadius' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Min Turn Radius'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 50,
+                                            max: 5000,
+                                            step: '10',
+                                            value: trainData.stats?.minTurnRadius || 200,
+                                            onChange: (e) => updateStat('minTurnRadius', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'minStationTurnRadius' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Min Station Turn Radius'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 100,
+                                            max: 10000,
+                                            step: '10',
+                                            value: trainData.stats?.minStationTurnRadius || 200,
+                                            onChange: (e) => updateStat('minStationTurnRadius', parseInt(e.target.value)),
+                                            className: 'w-full p-2 border border-input bg-background rounded text-sm'
+                                        })
+                                    ]),
+
+                                    React.createElement('div', { key: 'maxSlopePercentage' }, [
+                                        React.createElement('label', {
+                                            className: 'block text-sm font-medium mb-1'
+                                        }, 'Max Slope Percentage'),
+                                        React.createElement('input', {
+                                            type: 'number',
+                                            min: 1,
+                                            max: 15,
+                                            step: '0.1',
+                                            value: trainData.stats?.maxSlopePercentage || 6,
+                                            onChange: (e) => updateStat('maxSlopePercentage', parseInt(e.target.value)),
                                             className: 'w-full p-2 border border-input bg-background rounded text-sm'
                                         })
                                     ])
@@ -5324,6 +5619,12 @@
 				let dieselCommuterCount = 0;
 				let standardSBahnCount = 0;
 				let automatedSBahnCount = 0;
+                let RubberMetroCount = 0;
+                let AutomatedRubberMetroCount = 0;
+                let RubberLRTCount = 0;
+                let PeopleMoverCount = 0;
+                let DualModeCommuterCount = 0;
+                let HydrogenCommuterCount = 0;
 				let fixedCount = 0;
 				
 				// Helper function to traverse the tree and count trains
@@ -5351,30 +5652,48 @@
 									case "Fixed Standard Trains":
 										fixedCount += trainCount;
 										break;
-									case "Standard Metro":
+									case "Metro":
 										standardMetroCount += trainCount;
 										break;
 									case "Automated Metro":
 										automatedMetroCount += trainCount;
 										break;
-									case "Standard LRT":
+									case "LRT":
 										standardLRTCount += trainCount;
 										break;
 									case "Diesel LRT":
 										dieselLRTCount += trainCount;
 										break;
-									case "Standard Commuter":
+									case "Commuter":
 										standardCommuterCount += trainCount;
 										break;
 									case "Diesel Commuter":
 										dieselCommuterCount += trainCount;
 										break;
-									case "Standard S-Bahn":
+									case "S-Bahn":
 										standardSBahnCount += trainCount;
 										break;
 									case "Automated S-Bahn":
 										automatedSBahnCount += trainCount;
 										break;
+                                    case "Rubber Metro":
+                                        RubberMetroCount += trainCount;
+                                        break;
+                                    case "Automated Rubber Metro": 
+                                        AutomatedRubberMetroCount += trainCount;
+                                        break;
+                                    case "Rubber LRT": 
+                                        RubberLRTCount += trainCount;
+                                        break;
+                                    case "Automated People Mover": 
+                                        PeopleMoverCount += trainCount;
+                                        break;
+                                    case "Dual-Mode Commuter": 
+                                        DualModeCommuterCount += trainCount;
+                                        break;
+                                    case "Hydrogen Commuter": 
+                                        HydrogenCommuterCount += trainCount;
+                                        break;
 								}
 							});
 						});
@@ -5423,7 +5742,13 @@
 								React.createElement('div', {}, `Standard Commuter: ${standardCommuterCount}`),
 								React.createElement('div', {}, `Diesel Commuter: ${dieselCommuterCount}`),
 								React.createElement('div', {}, `Standard S-Bahn: ${standardSBahnCount}`),
-								React.createElement('div', {}, `Automated S-Bahn: ${automatedSBahnCount}`)
+								React.createElement('div', {}, `Automated S-Bahn: ${automatedSBahnCount}`),
+                                React.createElement('div', {}, `Rubber Metro: ${RubberMetroCount}`),
+                                React.createElement('div', {}, `Automated Rubber Metro: ${AutomatedRubberMetroCount}`),
+                                React.createElement('div', {}, `Rubber LRT: ${RubberLRTCount}`),
+                                React.createElement('div', {}, `People Mover: ${PeopleMoverCount}`),
+                                React.createElement('div', {}, `Dual-Mode Commuter: ${DualModeCommuterCount}`),
+                                React.createElement('div', {}, `Hydrogen Commuter: ${HydrogenCommuterCount}`)
 							])
                         ]),
 
